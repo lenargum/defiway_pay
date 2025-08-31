@@ -1,0 +1,424 @@
+/* DefiWay Landing Page - Form Components */
+/* Based on imported glassmorphism form styles */
+
+/* 📝 Base Input Styles */
+#defiway-landing .form-input {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--space-4) var(--space-5);
+  gap: var(--space-3);
+  min-height: var(--space-14);
+  
+  background: transparent;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-base);
+  
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-white);
+  
+  transition: all var(--transition-base);
+}
+
+#defiway-landing .form-input::placeholder {
+  color: var(--color-white);
+  opacity: var(--text-muted);
+}
+
+/* Input States */
+#defiway-landing .form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(72, 197, 199, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+#defiway-landing .form-input:hover {
+  border-color: rgba(230, 230, 230, 0.3);
+}
+
+/* Input with content (filled state) */
+#defiway-landing .form-input:not(:placeholder-shown) {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(230, 230, 230, 0.3);
+}
+
+/* Input Error State */
+#defiway-landing .form-input.error {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+#defiway-landing .form-input.error::placeholder {
+  color: #ff6b6b;
+}
+
+/* 📞 Phone Input Specific */
+#defiway-landing .form-input-phone {
+  padding-left: var(--space-3);
+}
+
+#defiway-landing .phone-prefix {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-3);
+  color: var(--color-white);
+  opacity: var(--text-muted);
+  font-size: var(--font-size-base);
+  border-right: 1px solid var(--border-light);
+  margin-right: var(--space-3);
+}
+
+/* 📧 Email Input */
+#defiway-landing .form-input-email {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' opacity='0.5'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'%3E%3C/path%3E%3Cpolyline points='22,6 12,13 2,6'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  background-size: 20px;
+  padding-right: var(--space-12);
+}
+
+/* 📝 Textarea */
+#defiway-landing .form-textarea {
+  min-height: 120px;
+  resize: vertical;
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+}
+
+#defiway-landing .form-textarea::placeholder {
+  color: var(--color-white);
+  opacity: var(--text-muted);
+}
+
+/* 📝 Form Groups */
+#defiway-landing .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+#defiway-landing .form-row {
+  display: flex;
+  gap: var(--space-6);
+
+  position: relative;
+}
+
+#defiway-landing .form-col {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+#defiway-landing .form-row .form-col {
+  flex: 1;
+}
+
+#defiway-landing .form-row .form-group {
+  flex: 1;
+}
+
+/* 🏷️ Form Labels */
+#defiway-landing .form-label {
+  font-family: var(--font-family);
+  font-weight: var(--font-medium);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+#defiway-landing .form-label.required::after {
+  content: '*';
+  color: var(--color-primary);
+  margin-left: var(--space-1);
+}
+
+/* ❌ Form Error Messages */
+#defiway-landing .form-error {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: #ff6b6b;
+}
+
+/* ✅ Checkbox Styles */
+#defiway-landing .consent-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  cursor: pointer;
+}
+
+#defiway-landing .consent-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+
+#defiway-landing .checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-6);
+  height: var(--space-6);
+  background: transparent;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-base);
+  border: 1px solid var(--border-light);
+}
+
+#defiway-landing .consent-checkbox input[type="checkbox"]:checked + .checkmark {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+#defiway-landing .check-icon {
+  width: var(--space-4);
+  height: var(--space-4);
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+#defiway-landing .consent-checkbox input[type="checkbox"]:checked + .checkmark .check-icon {
+  opacity: 1;
+}
+
+/* Keyboard focus ring (a11y) */
+#defiway-landing .consent-checkbox input[type="checkbox"]:focus-visible + .checkmark {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+#defiway-landing .consent-text {
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-white);
+}
+
+#defiway-landing .checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  cursor: pointer;
+  margin-bottom: var(--space-6);
+}
+
+#defiway-landing .checkbox-input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+#defiway-landing .checkbox-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Checkbox checked state */
+#defiway-landing .checkbox-input:checked + .checkbox-custom {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+#defiway-landing .checkbox-input:checked + .checkbox-custom::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-image: url('/assets/icons/ui/check.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+}
+
+/* Checkbox hover state */
+#defiway-landing .checkbox-wrapper:hover .checkbox-custom {
+  border-color: var(--color-primary);
+  background: rgba(72, 197, 199, 0.1);
+}
+
+/* Checkbox focus state */
+#defiway-landing .checkbox-input:focus + .checkbox-custom {
+  box-shadow: 0 0 0 3px rgba(72, 197, 199, 0.2);
+}
+
+/* 🏷️ Checkbox Label */
+#defiway-landing .checkbox-label {
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-white);
+  opacity: var(--text-muted);
+  cursor: pointer;
+}
+
+#defiway-landing .checkbox-label a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+#defiway-landing .checkbox-label a:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+/* 🔘 Radio Buttons */
+#defiway-landing .radio-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+  margin-bottom: var(--space-4);
+}
+
+#defiway-landing .radio-input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+#defiway-landing .radio-custom {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--border-light);
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+  position: relative;
+}
+
+#defiway-landing .radio-input:checked + .radio-custom {
+  border-color: var(--color-primary);
+}
+
+#defiway-landing .radio-input:checked + .radio-custom::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#defiway-landing .radio-wrapper:hover .radio-custom {
+  border-color: var(--color-primary);
+}
+
+#defiway-landing .radio-input:focus + .radio-custom {
+  box-shadow: 0 0 0 3px rgba(72, 197, 199, 0.2);
+}
+
+/* 🏷️ Radio Label */
+#defiway-landing .radio-label {
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+/* 📱 Responsive Form Adjustments */
+@media (max-width: 768px) {
+  #defiway-landing .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  #defiway-landing .form-input {
+    min-height: 52px;
+    padding: var(--space-3) var(--space-4);
+  }
+  
+  #defiway-landing .phone-prefix {
+    padding: 0 var(--space-2);
+    margin-right: var(--space-2);
+  }
+}
+
+@media (max-width: 480px) {
+  #defiway-landing .form-input {
+    min-height: 48px;
+    font-size: var(--font-size-sm);
+  }
+  
+  #defiway-landing .checkbox-wrapper {
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+  
+  #defiway-landing .checkbox-label,
+  #defiway-landing .radio-label {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* 🎨 Form Container Styling */
+#defiway-landing .form-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  backdrop-filter: var(--backdrop-blur);
+}
+
+#defiway-landing .form-title {
+  font-family: var(--font-family);
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-tight);
+  color: var(--color-white);
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+/* 📤 Submit Button in Forms */
+#defiway-landing .form-submit {
+  width: 100%;
+  margin-top: var(--space-4);
+}
+
+/* 💡 Form Hints */
+#defiway-landing .form-hint {
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  opacity: var(--text-muted);
+  margin-top: var(--space-1);
+}

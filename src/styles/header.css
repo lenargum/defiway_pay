@@ -1,0 +1,83 @@
+/* DefiWay Landing Page - Header Styles (adapted from 1.css visual styling) */
+
+/* Header - Responsive layout with 1.css visual styling */
+#defiway-landing .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  z-index: var(--z-fixed);
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  transition: var(--transition-base);
+}
+
+/* Header Container - Responsive flexbox layout */
+#defiway-landing .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1760px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* Logo - 1.css styling with responsive positioning */
+#defiway-landing .header-logo {
+  flex-shrink: 0;
+}
+
+#defiway-landing .header-logo .logo {
+  width: 180px;
+  height: 32px;
+}
+
+/* Navigation - 1.css styling with responsive flexbox */
+#defiway-landing .header-nav {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+/* Nav Items - Exact 1.css typography */
+#defiway-landing .nav-item {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  opacity: 0.7;
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+#defiway-landing .nav-item.active {
+  font-weight: 500;
+  opacity: 1;
+}
+
+#defiway-landing .nav-item:hover {
+  opacity: 1;
+}
+
+/* Header CTA - Use existing design system button */
+#defiway-landing .header-cta {
+  flex-shrink: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #defiway-landing .header-container {
+    padding: 0 24px;
+  }
+  
+  #defiway-landing .header-nav {
+    gap: 32px;
+  }
+  
+  #defiway-landing .header-logo .logo {
+    width: 140px;
+    height: 25px;
+  }
+}

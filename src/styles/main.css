@@ -1,0 +1,22 @@
+/* DefiWay Landing Page - Main Styles Entry Point */
+/* Modular CSS architecture for better maintainability */
+
+/* Import design system foundation */
+@import './design-system.css';
+@import './buttons.css';
+@import './forms.css';
+@import './base.css';
+@import './header.css';
+@import './footer.css';
+
+/* Import all section styles */
+@import './sections/hero.css';
+@import './sections/benefits.css';
+@import './sections/crypto-device.css';
+@import './sections/usdt.css';
+@import './sections/additional-benefits.css';
+@import './sections/partners.css';
+@import './sections/contact-us.css';
+
+/* Main CSS file now serves as the entry point for all modular styles */
+/* Each section is organized in its own file for easier maintenance and editing */

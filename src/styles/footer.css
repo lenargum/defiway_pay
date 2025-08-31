@@ -1,0 +1,317 @@
+/* DefiWay Landing Page - Footer Styles (from footer.css) */
+
+/* Footer */
+#defiway-landing .footer {
+  background: var(--color-black);
+  padding-top: var(--space-25);
+  padding-bottom: var(--space-6);
+  position: relative;
+}
+
+#defiway-landing .footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(185, 242, 243, 0.2);
+}
+
+#defiway-landing .footer .container { max-width: var(--container-4xl); }
+
+#defiway-landing .footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-5);
+  margin-bottom: var(--space-25);
+  align-items: start;
+}
+
+#defiway-landing .footer-brand {
+  width: 228px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 94px;
+}
+
+#defiway-landing .footer-logo-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6-5);
+}
+
+#defiway-landing .footer-logo {
+  height: 32px;
+  width: 180px;
+}
+
+#defiway-landing .footer-contact-info {
+  font-family: var(--font-family);
+  font-weight: var(--font-medium);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-primary);
+}
+
+#defiway-landing .footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+#defiway-landing .social-title {
+  font-family: var(--font-family);
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-white);
+}
+
+#defiway-landing .social-links {
+  display: flex;
+  gap: var(--space-3);
+}
+
+#defiway-landing .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-12);
+  height: var(--space-12);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-base);
+  transition: var(--transition-base);
+}
+
+#defiway-landing .social-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#defiway-landing .social-icon {
+  width: var(--space-6);
+  height: var(--space-6);
+  opacity: 0.5;
+  transition: var(--transition-base);
+}
+
+#defiway-landing .social-link:hover .social-icon {
+  opacity: 1;
+}
+
+#defiway-landing .footer-nav {
+  display: flex;
+  gap: var(--space-20);
+}
+
+#defiway-landing .nav-column {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 160px;
+}
+
+#defiway-landing .nav-title {
+  font-family: var(--font-family);
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-white);
+}
+
+#defiway-landing .nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: 0;
+  margin: 0;
+}
+
+#defiway-landing .nav-link {
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-white);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+#defiway-landing .nav-link:hover {
+  color: var(--color-primary);
+}
+
+#defiway-landing .app-container {
+  position: relative;
+  width: 573px;
+  min-height: 276px;
+
+  margin-top: -32px;
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-bottom: 32px;
+
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
+#defiway-landing .app-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(359.85deg, rgba(185, 242, 243, 0.2) 0.13%, rgba(185, 242, 243, 0) 66.3%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+#defiway-landing .app-preview {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 230px;
+  height: 312px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#defiway-landing .app-phone {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+#defiway-landing .app-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 287px;
+  padding-top: 0;
+}
+
+#defiway-landing .app-title {
+  font-family: var(--font-family);
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-white);
+}
+
+#defiway-landing .app-description {
+  font-family: var(--font-family);
+  font-weight: var(--font-light);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-white);
+}
+
+#defiway-landing .app-link {
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+#defiway-landing .app-link:hover,
+#defiway-landing .app-link:focus {
+  text-decoration: underline;
+}
+
+
+#defiway-landing .app-downloads {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: 44px;
+}
+
+#defiway-landing .app-store-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-2-5) 0;
+  width: 144px;
+  height: 48px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-base);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+#defiway-landing .app-store-btn:hover .store-icon,
+#defiway-landing .app-store-btn:focus .store-icon {
+  color: var(--color-primary);
+}
+
+#defiway-landing .store-icon {
+  width: var(--space-6);
+  height: var(--space-6);
+}
+
+#defiway-landing .store-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  white-space: nowrap;
+}
+
+#defiway-landing .store-label {
+  font-family: "Mulish", var(--font-family);
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+  color: var(--color-white);
+}
+
+#defiway-landing .store-name {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--color-white);
+}
+
+#defiway-landing .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-7);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#defiway-landing .copyright {
+  font-family: var(--font-family);
+  font-weight: var(--font-light);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#defiway-landing .footer-menu {
+  display: flex;
+  gap: var(--space-6);
+}
+
+#defiway-landing .footer-link {
+  font-family: var(--font-family);
+  font-weight: var(--font-light);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+#defiway-landing .footer-link:hover {
+  color: var(--color-white);
+}

@@ -1,0 +1,132 @@
+/* DefiWay Landing Page - Crypto Device Section Styles */
+
+/* Crypto Device Section */
+#defiway-landing .crypto-device-section {
+  padding: 114px 0;
+  background: var(--color-black);
+}
+
+/* Glass panel that matches reference container (rounded, blurred) */
+#defiway-landing .crypto-device-panel {
+  border-radius: var(--radius-xl);
+  padding: 56px;
+  position: relative;
+  overflow: hidden;
+
+  background-image:
+    url('/assets/sections/device/crypto-device.png'),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(83, 190, 198, 0.2) 100%);
+  background-size: cover;
+  background-position: center bottom; /* reference bottom alignment */
+}
+
+#defiway-landing .crypto-device-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px; /* border thickness */
+  background: linear-gradient(359.85deg, rgba(185, 242, 243, 0.2) 0.13%, rgba(185, 242, 243, 0) 66.3%);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+#defiway-landing .crypto-device-content {
+  display: block;
+  max-width: var(--container-2xl);
+  margin: 0 auto;
+}
+
+#defiway-landing .device-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px; /* reference spacing */
+  max-width: 749px; /* reference left column width */
+}
+
+#defiway-landing .device-head {
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* Title ↔ Subtitle exact gap */
+}
+
+#defiway-landing .device-title {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-2xl); /* 36px */
+  line-height: 1.44; /* ≈ 52px */
+}
+
+#defiway-landing .device-description {
+  font-weight: var(--font-normal);
+  font-size: var(--font-size-base); /* 16px */
+  line-height: 1.75; /* ≈ 28px */
+  color: var(--color-white);
+  max-width: 429px; /* reference */
+}
+
+#defiway-landing .device-features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  max-width: 516px; /* reference */
+}
+
+#defiway-landing .device-feature {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 48px; /* reference row height */
+}
+
+#defiway-landing .feature-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  background: transparent;
+  position: relative;
+  color: var(--color-white);
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-base);
+  flex-shrink: 0;
+}
+
+#defiway-landing .feature-number::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px; /* border thickness */
+  background: linear-gradient(221.84deg, rgba(185, 242, 243, 0.6) -5.86%, rgba(185, 242, 243, 0) 74.04%);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+#defiway-landing .feature-text {
+  font-weight: var(--font-medium);
+  font-size: var(--font-size-20);
+  line-height: 28px; /* reference */
+  color: var(--color-white);
+}
+
+#defiway-landing .device-visual {
+  display: none; /* No separate right image; background belongs to panel */
+}
+
+#defiway-landing .device-image { display: none; }

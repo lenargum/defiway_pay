@@ -1,0 +1,143 @@
+/* DefiWay Landing Page - Base Styles */
+/* CSS reset and foundational styles - Design tokens are in design-system.css */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200,300;400;500&display=swap');
+
+/* CSS Reset and Base Styles */
+/* Reset body default styles globally */
+body {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+#defiway-landing {
+  font-family: var(--font-family);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-white);
+  background-color: var(--color-black);
+  min-height: 100vh;
+}
+
+#defiway-landing * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#defiway-landing img {
+  max-width: 100%;
+  height: auto;
+}
+
+#defiway-landing a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-base);
+  border-radius: 4px;
+}
+
+#defiway-landing a:hover:not(.btn),
+#defiway-landing a:focus:not(.btn) {
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+#defiway-landing ul {
+  list-style: none;
+}
+
+#defiway-landing button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Typography Reset */
+#defiway-landing h1, 
+#defiway-landing h2, 
+#defiway-landing h3, 
+#defiway-landing h4, 
+#defiway-landing h5, 
+#defiway-landing h6 {
+  font-weight: var(--font-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-white);
+}
+
+#defiway-landing p {
+  color: var(--color-white);
+}
+
+/* Layout Components */
+#defiway-landing .container {
+  max-width: var(--container-2xl);
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 1440px) {
+  #defiway-landing .container {
+    max-width: var(--container-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  #defiway-landing .container {
+    max-width: var(--container-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  #defiway-landing .container {
+    max-width: var(--container-sm);
+  }
+}
+
+/* Section default paddings (desktop-first, override per section if needed) */
+#defiway-landing section, #defiway-landing footer {
+  padding-left: var(--space-5);
+  padding-right: var(--space-5);
+}
+
+@media (max-width: 768px) {
+  #defiway-landing section, #defiway-landing footer {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  #defiway-landing section, #defiway-landing footer {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+}
+
+/* Accessibility */
+#defiway-landing .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Smooth Scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Focus Styles */
+#defiway-landing :focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

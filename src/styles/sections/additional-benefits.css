@@ -1,0 +1,211 @@
+/* DefiWay Landing Page - Additional Benefits Section Styles */
+
+/* Additional Benefits Section */
+#defiway-landing .additional-benefits-section {
+  padding: 124px 0;
+  background: var(--color-black);
+  position: relative;
+}
+
+#defiway-landing .additional-benefits-wrap {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(83, 190, 198, 0.2) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  overflow: hidden;
+}
+
+#defiway-landing .additional-benefits-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: var(--radius-lg);
+
+  background: linear-gradient(
+    359.85deg,
+    rgba(185, 242, 243, 0.2) 0.13%,
+    rgba(185, 242, 243, 0) 66.3%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#defiway-landing .additional-benefits-content {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+
+  padding: 56px var(--space-8) 56px 56px;
+  position: relative;
+}
+
+#defiway-landing .benefits-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+#defiway-landing .benefits-title {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-tight);
+}
+
+#defiway-landing .benefits-grid-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#defiway-landing .benefits-column {
+  display: flex;
+  gap: 32px;
+}
+
+#defiway-landing .benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 360px;
+}
+
+#defiway-landing .benefit-icon-wrapper {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+#defiway-landing .benefit-icon-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* ring thickness */
+  border-radius: 50%;
+  background: linear-gradient(
+    221.84deg,
+    rgba(185, 242, 243, 0.6) -5.86%,
+    rgba(185, 242, 243, 0) 74.04%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#defiway-landing .benefit-small-icon {
+  width: 24px;
+  height: 24px;
+}
+
+#defiway-landing .benefit-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#defiway-landing .benefit-small-title {
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-base);
+  color: var(--color-white);
+}
+
+#defiway-landing .benefit-small-description {
+  font-weight: var(--font-light);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#defiway-landing .benefits-visual {
+  position: relative;
+}
+
+#defiway-landing .benefits-pattern {
+  width: 100%;
+  height: 100%;
+}
+
+#defiway-landing .benefits-logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 46.55%; /* visually centers within the pattern area */
+  width: 96px;
+  height: 96px;
+  z-index: 1;
+}
+
+#defiway-landing .light-effect {
+  position: absolute;
+  width: 156px;
+  height: 156px;
+  left: 46.55%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+
+  border-radius: 50%;
+
+  background: var(--color-teal);
+  border: 1px solid var(--color-black);
+}
+
+#defiway-landing .light-effect-400 {
+  filter: blur(400px);
+}
+
+#defiway-landing .light-effect-800 {
+  filter: blur(800px);
+}
+
+#defiway-landing .light-1 {
+  width: 770px;
+  height: 560px;
+  top: 0;
+  right: -200px;
+}
+
+#defiway-landing .light-2 {
+  width: 100%;
+  height: 560px;
+  top: 0;
+  left: 0;
+}
+
+#defiway-landing .light-3 {
+  width: 770px;
+  height: 560px;
+  top: 0;
+  right: -200px;
+}
+
+#defiway-landing .visual-element {
+  position: absolute;
+  width: 553px;
+  height: 556px;
+  top: 2px;
+  right: -100px;
+}

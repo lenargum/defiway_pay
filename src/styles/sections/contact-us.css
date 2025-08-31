@@ -1,0 +1,124 @@
+#defiway-landing .contact-us-section .container {
+    padding: var(--space-14);
+
+    display: grid;
+    grid-template-columns: 1fr 630px;
+    gap: var(--space-14);
+    align-items: start;
+    
+    border-radius: var(--radius-2xl);
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: var(--backdrop-blur-xl);
+  }
+  
+  /* Contact Info */
+  #defiway-landing .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+  
+  #defiway-landing .contact-title {
+    font-family: var(--font-family);
+    font-weight: var(--font-semibold);
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-tight);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #defiway-landing .contact-subtitle {
+    font-family: var(--font-family);
+    font-weight: var(--font-medium);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-white);
+  }
+  
+  #defiway-landing .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  
+    margin: var(--space-5-5) 0;
+  }
+  
+  #defiway-landing .contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  
+  #defiway-landing .contact-icon {
+    width: var(--space-6);
+    height: var(--space-6);
+    opacity: 0.7;
+  }
+  
+  #defiway-landing .contact-text {
+    font-family: var(--font-family);
+    font-weight: var(--font-medium);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-white);
+  }
+  
+  #defiway-landing .social-links {
+    display: flex;
+    gap: var(--space-3);
+  }
+  
+  #defiway-landing .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--space-12);
+    height: var(--space-12);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-base);
+    transition: var(--transition-base);
+  }
+  
+  #defiway-landing .social-link:hover,
+  #defiway-landing .social-link:focus {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  #defiway-landing .social-icon {
+    width: var(--space-6);
+    height: var(--space-6);
+    opacity: 0.5;
+    transition: var(--transition-base);
+  }
+  
+  #defiway-landing .social-link:hover .social-icon,
+  #defiway-landing .social-link:focus .social-icon {
+    opacity: 1;
+  }
+  
+  /* Contact Form */
+  #defiway-landing .contact-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+  
+  /* Privacy Policy Link */
+  #defiway-landing .privacy-link {
+    color: var(--color-primary);
+  }
+  
+  #defiway-landing .privacy-link:hover,
+  #defiway-landing .privacy-link:focus {
+    text-decoration: underline;
+  }
+  
+  
+  /* Form primitives are now reused from forms.css */
+  
+  #defiway-landing .submit-btn {
+    align-self: flex-start;
+    margin-top: var(--space-6);
+  }
+  

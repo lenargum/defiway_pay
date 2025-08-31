@@ -1,0 +1,95 @@
+/* DefiWay Landing Page - Hero Section Styles */
+
+/* Hero Section */
+#defiway-landing .hero-section {
+  padding: var(--space-38) 0 0;
+  background-image: url('/assets/sections/hero/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  height: var(--container-hero);
+}
+
+#defiway-landing .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+  max-width: 990px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#defiway-landing .hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 16px 4px 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  height: 44px;
+}
+
+#defiway-landing .avatar-stack {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  width: 92px;
+}
+
+#defiway-landing .avatar-stack .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 1px solid #1B1B1B;
+  position: relative;
+  padding: 2px;
+}
+
+#defiway-landing .avatar-stack .avatar:nth-child(1) { z-index: 1; margin-right: -8px; background-color: #DFD0B1; }
+#defiway-landing .avatar-stack .avatar:nth-child(2) { z-index: 2; margin-right: -8px; left: 0; background-color: #000000; }
+#defiway-landing .avatar-stack .avatar:nth-child(3) { z-index: 3; background-color: #000000; }
+
+#defiway-landing .badge-copy {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#defiway-landing .badge-stat {
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-white);
+}
+
+#defiway-landing .badge-description {
+  font-weight: var(--font-normal);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-white);
+}
+
+#defiway-landing .hero-title {
+  /* Gradient applied via gradient-text-primary class */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-tight);
+  max-width: 990px;
+}
+
+#defiway-landing .hero-subtitle {
+  font-weight: var(--font-normal);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-relaxed);
+  text-align: center;
+  color: var(--color-white);
+  max-width: 600px;
+}

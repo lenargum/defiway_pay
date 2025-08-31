@@ -1,0 +1,111 @@
+/* DefiWay Landing Page - USDT Section Styles */
+
+/* USDT Section */
+#defiway-landing .usdt-section {
+  padding: var(--padding-top-usdt) 0 var(--padding-bottom-usdt);
+  background-image: url('/assets/sections/usdt/usdt-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+#defiway-landing .usdt-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+#defiway-landing .usdt-title {
+  margin-top: var(--space-8);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-tight);
+  text-align: center;
+  max-width: var(--width-usdt-title); /* reference width */
+}
+
+#defiway-landing .usdt-highlight {
+  color: var(--color-primary);
+  background: none;
+  -webkit-text-fill-color: var(--color-primary);
+}
+
+#defiway-landing .usdt-features {
+  display: flex;
+  gap: var(--gap-usdt-features); /* reference gap */
+  max-width: var(--width-usdt-features); /* reference width */
+  width: 100%;
+  justify-content: center;
+  margin-top: var(--margin-top-usdt-features); /* align features block relative to title */
+}
+
+#defiway-landing .usdt-feature {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-usdt-card); /* exact */
+  padding: var(--space-8);
+  text-align: center;
+  transition: var(--transition-base);
+  position: relative;
+  width: var(--width-usdt-card); /* exact */
+  height: var(--height-usdt-card); /* exact */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#defiway-landing .usdt-feature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* border thickness */
+  border-radius: var(--radius-usdt-card);
+  background: linear-gradient(179.85deg, rgba(185, 242, 243, 0.2) 0.13%, rgba(185, 242, 243, 0) 66.3%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#defiway-landing .usdt-feature-title {
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-xl);
+  line-height: 36px; /* exact */
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+#defiway-landing .usdt-feature-description {
+  font-weight: var(--font-light);
+  font-size: var(--font-size-base);
+  line-height: 24px; /* exact */
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive reflow back to grid on smaller screens */
+@media (max-width: 1200px) {
+  #defiway-landing .usdt-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-8);
+    margin-top: var(--space-16);
+  }
+  #defiway-landing .usdt-feature {
+    width: auto;
+    height: auto;
+  }
+}
+
+

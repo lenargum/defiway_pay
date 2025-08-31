@@ -14,7 +14,7 @@ Modern, responsive landing page for DefiWay Pay built with Vite, modular CSS, an
 
 ## Quick Start
 
-``
+```bash
 # Install deps
 npm install
 

@@ -18,6 +18,7 @@
   background: rgba(185, 242, 243, 0.2);
 }
 
+
 #dwp .footer-top {
   display: flex;
   justify-content: space-between;
@@ -76,7 +77,8 @@
 
 #dwp .footer-nav {
   display: flex;
-  gap: var(--space-20);
+  gap: var(--space-10);
+  justify-content: space-between;
 }
 
 #dwp .nav-column {

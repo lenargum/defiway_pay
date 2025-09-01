@@ -160,6 +160,8 @@ npm run build
 # Upload dist/ to hosting/CDN
 ```
 
+Ensure if path for OpenGraph image is correct.
+
 
 ## Contributing
 

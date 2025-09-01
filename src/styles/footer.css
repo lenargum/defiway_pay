@@ -18,8 +18,6 @@
   background: rgba(185, 242, 243, 0.2);
 }
 
-#dwp .footer .container { max-width: var(--container-4xl); }
-
 #dwp .footer-top {
   display: flex;
   justify-content: space-between;

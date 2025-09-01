@@ -125,7 +125,7 @@
 
 /* Mobile (375) */
 @media (max-width: 767px) {
-  #dwp .hero-section { min-height: var(--hero-height-375); padding-top: var(--space-25); background-position: center 172px; background-size: auto 616px; }
+  #dwp .hero-section { min-height: var(--hero-height-375); padding-top: var(--space-25); background-position: center 260px; background-size: auto 460px; }
   #dwp .hero-content { gap: var(--space-8); max-width: 309px; }
   #dwp .hero-badge { height: 40px; }
   #dwp .avatar-stack { height: 32px; width: 80px; }

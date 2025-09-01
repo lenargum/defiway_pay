@@ -64,27 +64,32 @@ function classPrefixPlugin(prefix = 'dwp-') {
   };
 }
 
-export default defineConfig({
-  root: 'src',
-  plugins: [
-    classPrefixPlugin('dwp-')
-  ],
-  build: {
-    outDir: '../dist',
-    emptyOutDir: true,
-    rollupOptions: {
-      input: {
-        main: 'src/index.html'
-      }
+export default defineConfig(({ command, mode }) => {
+  const isProduction = mode === 'production';
+  
+  return {
+    root: 'src',
+    base: isProduction ? '/defiway_pay/' : '/',
+    plugins: [
+      classPrefixPlugin('dwp-')
+    ],
+    build: {
+      outDir: '../dist',
+      emptyOutDir: true,
+      rollupOptions: {
+        input: {
+          main: 'src/index.html'
+        }
+      },
+      assetsDir: 'assets',
+      cssCodeSplit: false,
     },
-    assetsDir: 'assets',
-    cssCodeSplit: false,
-  },
-  css: {
-    postcss: './postcss.config.js'
-  },
-  server: {
-    open: true,
-    port: 3001
+    css: {
+      postcss: './postcss.config.js'
+    },
+    server: {
+      open: true,
+      port: 3001
+    }
   }
 })

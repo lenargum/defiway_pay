@@ -4,12 +4,22 @@
 /* Import fonts */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200,300;400;500&display=swap");
 
+/* Prevent overscroll bounce on mobile - apply to root elements */
+html {
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+}
+
 /* CSS Reset and Base Styles */
 /* Reset body default styles globally */
 body {
   margin: 0;
   padding: 0;
   display: block;
+  /* Prevent overscroll bounce on mobile */
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 #dwp {
@@ -18,6 +28,9 @@ body {
   color: var(--color-white);
   background-color: var(--color-black);
   min-height: 100vh;
+  /* Prevent overscroll bounce on mobile */
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
 }
 
 #dwp * {

@@ -2,7 +2,7 @@
 /* Based on imported glassmorphism button styles */
 
 /* 🔘 Base Button Styles */
-#defiway-landing .btn {
+#dwp .btn {
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
@@ -17,19 +17,19 @@
   min-width: 240px;
 }
 
-#defiway-landing .btn:focus {
+#dwp .btn:focus {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
-#defiway-landing .btn:disabled {
+#dwp .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
 }
 
 /* 🌟 Primary Button (Main CTA) */
-#defiway-landing .btn-primary {
+#dwp .btn-primary {
   padding: var(--space-4-5) var(--space-14);
   gap: var(--space-2-5);
   min-height: 60px;
@@ -51,13 +51,13 @@
   color: var(--color-white);
 }
 
-#defiway-landing .btn::after {
+#dwp .btn::after {
   content: "";
   position: absolute;
   inset: 0;
   padding: 1px; /* border thickness */
   border-radius: inherit;
-  background: var(--gradient-border-hover);
+  background: linear-gradient(273.52deg, #C0FEFF 0%, rgba(192, 254, 255, 0) 100%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -66,13 +66,13 @@
   transition: opacity var(--transition-base);
 }
 
-#defiway-landing .btn:hover::after,
-#defiway-landing .btn:focus::after {
+#dwp .btn:hover::after,
+#dwp .btn:focus::after {
   opacity: 1;
 }
 
 /* 🔗 Secondary Button (Less prominent) */
-#defiway-landing .btn-secondary {
+#dwp .btn-secondary {
   padding: var(--space-3-5) var(--space-15);
   gap: var(--space-2);
   min-height: 48px;
@@ -100,7 +100,7 @@
 
 
 /* 🔲 Icon Button (Square, minimal) */
-#defiway-landing .btn-icon {
+#dwp .btn-icon {
   padding: 0;
   width: 48px;
   height: 48px;
@@ -114,19 +114,19 @@
   opacity: var(--text-subtle);
 }
 
-#defiway-landing .btn-icon:hover {
+#dwp .btn-icon:hover {
   background: var(--glass-primary);
   opacity: 1;
 }
 
-#defiway-landing .btn-icon svg,
-#defiway-landing .btn-icon img {
+#dwp .btn-icon svg,
+#dwp .btn-icon img {
   width: 24px;
   height: 24px;
 }
 
 /* 📱 Button Icons */
-#defiway-landing .btn-icon-wrapper {
+#dwp .btn-icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,18 +134,18 @@
   height: 24px;
 }
 
-#defiway-landing .btn-icon-wrapper svg {
+#dwp .btn-icon-wrapper svg {
   width: 100%;
   height: 100%;
   fill: currentColor;
 }
 
-#defiway-landing .btn-primary .btn-icon-wrapper {
+#dwp .btn-primary .btn-icon-wrapper {
   width: 24px;
   height: 24px;
 }
 
-#defiway-landing .btn-primary .btn-icon-wrapper img {
+#dwp .btn-primary .btn-icon-wrapper img {
   width: 100%;
   height: 100%;
   filter: brightness(0) invert(1);
@@ -153,15 +153,15 @@
 
 /* 📱 Responsive Button Adjustments */
 @media (max-width: 1023px) {
-  #defiway-landing .btn-primary,
-  #defiway-landing .btn-secondary {
+  #dwp .btn-primary,
+  #dwp .btn-secondary {
     min-height: 44px;
   }
 }
 
 /* Accessibility: Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  #defiway-landing .btn {
+  #dwp .btn {
     transition: none;
   }
 }

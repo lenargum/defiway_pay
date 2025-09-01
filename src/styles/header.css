@@ -1,7 +1,7 @@
 /* DefiWay Landing Page - Header Styles (adapted from 1.css visual styling) */
 
 /* Header - Responsive layout with 1.css visual styling */
-#defiway-landing .header {
+#dwp .header {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
 }
 
 /* Header Container - Responsive flexbox layout */
-#defiway-landing .header-container {
+#dwp .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,24 +24,24 @@
 }
 
 /* Logo - 1.css styling with responsive positioning */
-#defiway-landing .header-logo {
+#dwp .header-logo {
   flex-shrink: 0;
 }
 
-#defiway-landing .header-logo .logo {
+#dwp .header-logo .logo {
   width: 180px;
   height: 32px;
 }
 
 /* Navigation - 1.css styling with responsive flexbox */
-#defiway-landing .header-nav {
+#dwp .header-nav {
   display: flex;
   align-items: center;
   gap: 56px;
 }
 
 /* Nav Items - Exact 1.css typography */
-#defiway-landing .nav-item {
+#dwp .nav-item {
   font-family: var(--font-family);
   font-weight: 300;
   font-size: 16px;
@@ -52,21 +52,21 @@
   transition: var(--transition-base);
 }
 
-#defiway-landing .nav-item.active {
+#dwp .nav-item.active {
   font-weight: 500;
   opacity: 1;
 }
 
-#defiway-landing .nav-item:hover {
+#dwp .nav-item:hover {
   opacity: 1;
 }
 
 /* Header CTA - Use existing design system button */
-#defiway-landing .header-cta {
+#dwp .header-cta {
   flex-shrink: 0;
 }
 
-#defiway-landing .menu-btn {
+#dwp .menu-btn {
   width: 28px;
   height: 28px;
 
@@ -82,7 +82,7 @@
   cursor: pointer;
 }
 
-#defiway-landing .menu-icon {
+#dwp .menu-icon {
   --icon-width: 20px;
   --icon-height: 14px;
   --icon-line-height: 2px;
@@ -101,7 +101,7 @@
   cursor: pointer;
 }
 
-#defiway-landing .menu-icon span {
+#dwp .menu-icon span {
   display: block;
   position: absolute;
   height: var(--icon-line-height);
@@ -119,51 +119,52 @@
   transition: 0.25s ease-in-out;
 }
 
-#defiway-landing .menu-icon span:nth-child(1) {
+#dwp .menu-icon span:nth-child(1) {
   top: calc(var(--icon-height) / 6 - var(--icon-line-height));
 }
 
-#defiway-landing .menu-icon span:nth-child(2),
-#defiway-landing .menu-icon span:nth-child(3) {
+#dwp .menu-icon span:nth-child(2),
+#dwp .menu-icon span:nth-child(3) {
   top: 50%;
   transform: translateY(-50%);
 }
 
-#defiway-landing .menu-icon span:nth-child(4) {
+#dwp .menu-icon span:nth-child(4) {
   top: calc(var(--icon-height) * 5 / 6);
 }
 
-#defiway-landing .menu-btn.open .menu-icon span:nth-child(1) {
+#dwp .menu-btn.open .menu-icon span:nth-child(1) {
   top: 0px;
   width: 0%;
   left: 50%;
   opacity: 0;
 }
 
-#defiway-landing .menu-btn.open .menu-icon span:nth-child(2) {
+#dwp .menu-btn.open .menu-icon span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-#defiway-landing .menu-btn.open .menu-icon span:nth-child(3) {
+#dwp .menu-btn.open .menu-icon span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-#defiway-landing .menu-btn.open .menu-icon span:nth-child(4) {
+#dwp .menu-btn.open .menu-icon span:nth-child(4) {
   top: calc(var(--icon-height) - var(--icon-line-height));
   width: 0%;
   left: 50%;
   opacity: 0;
 }
 
-#defiway-landing .mobile-menu {
+#dwp .mobile-menu {
   display: none;
 
+  z-index: var(--z-fixed);
   position: fixed;
   top: 72px;
   left: 0;
@@ -180,11 +181,11 @@
   overflow: auto;
 }
 
-#defiway-landing .menu-btn.open ~ .mobile-menu {
+#dwp .menu-btn.open ~ .mobile-menu {
   display: flex;
 }
 
-#defiway-landing .mobile-menu-content {
+#dwp .mobile-menu-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,7 +196,7 @@
   border-bottom: 1px solid rgba(230, 230, 230, 0.2);
 }
 
-#defiway-landing .mobile-menu-social {
+#dwp .mobile-menu-social {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -204,7 +205,7 @@
   padding: 80px var(--space-4) 16px;
 }
 
-#defiway-landing .mobile-menu-social-title {
+#dwp .mobile-menu-social-title {
   font-size: 16px;
   line-height: var(--line-height-base);
   color: var(--color-white);
@@ -213,72 +214,72 @@
 
 /* 1440 adjustments: reduce nav gap */
 @media (max-width: 1440px) and (min-width: 1024px) {
-  #defiway-landing .header-container {
+  #dwp .header-container {
     padding: 0 20px;
   }
-  #defiway-landing .header-nav {
+  #dwp .header-nav {
     gap: 44px;
   }
 }
 
 /* Tablet 768–1023: tighter padding and logo size */
 @media (max-width: 1023px) and (min-width: 768px) {
-  #defiway-landing .header-container {
+  #dwp .header-container {
     padding: 0 32px;
   }
-  #defiway-landing .header-logo .logo {
+  #dwp .header-logo .logo {
     width: 182px;
     height: 32px;
   }
-  #defiway-landing .header-container > .header-nav {
+  #dwp .header-container > .header-nav {
     display: none;
   }
 
-  #defiway-landing .header-container .header-nav {
+  #dwp .header-container .header-nav {
     flex-direction: column;
     gap: 32px;
   }
 
-  #defiway-landing .header-container > .header-cta {
+  #dwp .header-container > .header-cta {
     display: none;
   }
 }
 
 /* Mobile ≤768: shorter header, hide nav */
 @media (max-width: 768px) {
-  #defiway-landing .header {
+  #dwp .header {
     height: 60px;
   }
-  #defiway-landing .header-container {
+  #dwp .header-container {
     padding: 0 20px;
   }
-  #defiway-landing .header-logo .logo {
+  #dwp .header-logo .logo {
     width: 159px;
     height: 28px;
   }
-  #defiway-landing .header-container > .header-nav {
+  #dwp .header-container > .header-nav {
     display: none;
   }
 
-  #defiway-landing .header-container .header-nav {
+  #dwp .header-container .header-nav {
     flex-direction: column;
     gap: 24px;
   }
 
-  #defiway-landing .header-container > .header-cta {
+  #dwp .header-container > .header-cta {
     display: none;
   }
 
-  #defiway-landing .mobile-menu {
+  #dwp .mobile-menu {
     top: 60px;
   }
 
-  #defiway-landing .mobile-menu-content {
+  #dwp .mobile-menu-content {
     padding: 80px var(--space-4);
     gap: 80px;
   }
 
-  #defiway-landing .mobile-menu-social {
+  #dwp .mobile-menu-social {
     padding: 52px var(--space-4) 0;
     gap: 24px;
   }

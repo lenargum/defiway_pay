@@ -1,14 +1,14 @@
 /* DefiWay Landing Page - Additional Benefits Section Styles */
 
 /* Additional Benefits Section */
-#defiway-landing .other-benefits-section {
+#dwp .other-benefits-section {
   padding-top: 124px;
   padding-bottom: 120px;
   background: var(--color-black);
   position: relative;
 }
 
-#defiway-landing .other-benefits-section .container {
+#dwp .other-benefits-section .container {
   --other-benefits-background-image: url("/assets/sections/other-benefits/other-benefits-bg-pattern.svg");
   position: relative;
 
@@ -34,7 +34,7 @@
   overflow: hidden;
 }
 
-#defiway-landing .other-benefits-section .container::before {
+#dwp .other-benefits-section .container::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -53,14 +53,14 @@
   pointer-events: none;
 }
 
-#defiway-landing .other-benefits-text {
+#dwp .other-benefits-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 48px;
 }
 
-#defiway-landing .other-benefits-title {
+#dwp .other-benefits-title {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -71,20 +71,20 @@
   max-width: 414px;
 }
 
-#defiway-landing .other-benefits-grid {
+#dwp .other-benefits-grid {
   display: grid;
   grid-template-columns: minmax(360px, 1fr) minmax(360px, 1fr);
   grid-template-rows: 1fr 1fr;
   gap: 40px 32px;
 }
 
-#defiway-landing .other-benefit-item {
+#dwp .other-benefit-item {
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
-#defiway-landing .other-benefit-icon-wrapper {
+#dwp .other-benefit-icon-wrapper {
   flex-shrink: 0;
   
   display: flex;
@@ -96,7 +96,7 @@
   position: relative;
 }
 
-#defiway-landing .other-benefit-icon-wrapper::before {
+#dwp .other-benefit-icon-wrapper::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -114,25 +114,25 @@
   pointer-events: none;
 }
 
-#defiway-landing .other-benefit-small-icon {
+#dwp .other-benefit-small-icon {
   width: 24px;
   height: 24px;
 }
 
-#defiway-landing .other-benefit-text {
+#dwp .other-benefit-text {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-#defiway-landing .other-benefit-small-title {
+#dwp .other-benefit-small-title {
   font-weight: var(--font-semibold);
   font-size: var(--font-size-lg);
   line-height: var(--line-height-base);
   color: var(--color-white);
 }
 
-#defiway-landing .other-benefit-small-description {
+#dwp .other-benefit-small-description {
   font-weight: var(--font-light);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-base);
@@ -141,7 +141,7 @@
 
 /* visuals */
 
-#defiway-landing .other-benefits-light-effect {
+#dwp .other-benefits-light-effect {
   position: absolute;
   width: 156px;
   height: 156px;
@@ -153,20 +153,20 @@
   background: var(--color-teal);
 }
 
-#defiway-landing .other-benefits-light-effect-400 {
+#dwp .other-benefits-light-effect-400 {
   filter: blur(400px);
 }
 
-#defiway-landing .other-benefits-light-effect-800 {
+#dwp .other-benefits-light-effect-800 {
   filter: blur(800px);
 }
 
 /* 1440 adjustments */
 @media (max-width: 1440px) and (min-width: 1024px) {
-  #defiway-landing .other-benefits-title {
+  #dwp .other-benefits-title {
     max-width: none;
   }
-  #defiway-landing .other-benefits-grid {
+  #dwp .other-benefits-grid {
     max-width: 349px;
     grid-template-columns: 1fr;
     row-gap: 28px;
@@ -175,35 +175,35 @@
 
 /* Tablet (768) */
 @media (max-width: 1023px) and (min-width: 768px) {
-  #defiway-landing .other-benefits-section {
+  #dwp .other-benefits-section {
     padding-top: var(--space-20);
     padding-bottom: var(--space-20);
   }
-  #defiway-landing .other-benefits-section .container {
+  #dwp .other-benefits-section .container {
     border-radius: 40px;
 
     padding: 44px;
     gap: 48px;
   }
-  #defiway-landing .other-benefits-title {
+  #dwp .other-benefits-title {
     max-width: none;
     font-size: var(--font-size-28);
     line-height: var(--line-height-40px);
   }
-  #defiway-landing .other-benefits-grid {
+  #dwp .other-benefits-grid {
     max-width: 349px;
     grid-template-columns: 1fr;
     row-gap: 28px;
   }
-  #defiway-landing .other-benefit-icon-wrapper {
+  #dwp .other-benefit-icon-wrapper {
     width: 40px;
     height: 40px;
   }
-  #defiway-landing .other-benefit-small-title {
+  #dwp .other-benefit-small-title {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
   }
-  #defiway-landing .other-benefit-small-description {
+  #dwp .other-benefit-small-description {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-base);
   }
@@ -211,11 +211,11 @@
 
 /* Mobile (375) */
 @media (max-width: 768px) {
-  #defiway-landing .other-benefits-section {
+  #dwp .other-benefits-section {
     padding-top: var(--space-14);
     padding-bottom: var(--space-14);
   }
-  #defiway-landing .other-benefits-section .container {
+  #dwp .other-benefits-section .container {
     --other-benefits-background-image: url("/assets/sections/other-benefits/other-benefits-bg-pattern-mobile.svg");
 
     border-radius: 24px;
@@ -226,28 +226,28 @@
     background-size: 100% auto, auto auto, auto auto;
     background-position: bottom center, 0% 0%, 0% 0%;
   }
-  #defiway-landing .other-benefits-section .container::before {
+  #dwp .other-benefits-section .container::before {
     border-radius: 24px;
   }
-  #defiway-landing .other-benefits-title {
+  #dwp .other-benefits-title {
     max-width: none;
     font-size: var(--font-size-xl);
     line-height: 36px;
     text-align: center;
   }
-  #defiway-landing .other-benefits-grid {
+  #dwp .other-benefits-grid {
     grid-template-columns: 1fr;
     row-gap: 28px;
   }
-  #defiway-landing .other-benefit-icon-wrapper {
+  #dwp .other-benefit-icon-wrapper {
     width: 48px;
     height: 48px;
   }
-  #defiway-landing .other-benefit-small-title {
+  #dwp .other-benefit-small-title {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
   }
-  #defiway-landing .other-benefit-small-description {
+  #dwp .other-benefit-small-description {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-base);
   }

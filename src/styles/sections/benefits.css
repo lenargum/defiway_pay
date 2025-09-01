@@ -1,7 +1,7 @@
 /* DefiWay Landing Page - Benefits Section Styles */
 
 /* Benefits Section */
-#defiway-landing .benefits-section {
+#dwp .benefits-section {
   padding-top: var(--space-28);
   padding-bottom: var(--space-28);
   background-image: url("/assets/sections/benefits/benefits-background.png");
@@ -12,7 +12,7 @@
 }
 
 /* Constrain to reference widths for layout fidelity */
-#defiway-landing .benefits-section .container {
+#dwp .benefits-section .container {
   max-width: var(--container-2xl); /* 1400px */
 
   display: flex;
@@ -20,11 +20,11 @@
   gap: 132px;
 }
 
-#defiway-landing .benefits-section .section-header {
-  max-width: var(--width-benefits-header);
+#dwp .benefits-section .section-header {
+  max-width: 680px;
 }
 
-#defiway-landing .section-title {
+#dwp .section-title {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -32,10 +32,10 @@
   font-size: var(--font-size-4xl);
   line-height: var(--line-height-tight);
   text-align: center;
-  max-width: var(--width-benefits-header);
+  max-width: 680px;
 }
 
-#defiway-landing .benefits-grid {
+#dwp .benefits-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -46,22 +46,22 @@
   margin-right: auto;
 }
 
-#defiway-landing .benefit-card {
+#dwp .benefit-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  width: var(--width-benefit-card);
+  width: 329px;
 }
 
-#defiway-landing .benefit-icon {
-  width: var(--size-benefit-icon);
-  height: var(--size-benefit-icon);
+#dwp .benefit-icon {
+  width: 96px;
+  height: 96px;
   aspect-ratio: 1;
   object-fit: contain;
 }
 
-#defiway-landing .benefit-content {
+#dwp .benefit-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,7 +70,7 @@
   width: 292px;
 }
 
-#defiway-landing .benefit-title {
+#dwp .benefit-title {
   font-weight: var(--font-medium);
   font-size: var(--font-size-xl);
   line-height: var(--line-height-tight);
@@ -78,7 +78,7 @@
   white-space: nowrap;
 }
 
-#defiway-landing .benefit-description {
+#dwp .benefit-description {
   font-weight: var(--font-light);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
@@ -87,63 +87,63 @@
 
 /* 1440 adjustments */
 @media (max-width: 1440px) and (min-width: 1024px) {
-  #defiway-landing .benefits-section {
+  #dwp .benefits-section {
     padding-top: var(--space-27-5);
     padding-bottom: var(--space-27-5);
   }
-  #defiway-landing .benefits-section .container {
+  #dwp .benefits-section .container {
     max-width: var(--container-xl);
   }
-  #defiway-landing .benefits-grid {
+  #dwp .benefits-grid {
     max-width: var(--container-xl);
   }
-  #defiway-landing .benefit-card {
+  #dwp .benefit-card {
     width: 299px;
   }
-  #defiway-landing .benefit-content {
+  #dwp .benefit-content {
     width: 275px;
   }
 }
 
 /* Tablet (768) */
 @media (max-width: 1023px) and (min-width: 768px) {
-  #defiway-landing .benefits-section {
+  #dwp .benefits-section {
     padding-top: var(--space-20);
     padding-bottom: var(--space-24);
     background-image: url("/assets/sections/benefits/benefits-bg-tablet.png");
   }
-  #defiway-landing .benefits-section .container {
+  #dwp .benefits-section .container {
     max-width: 704px;
     gap: 72px;
   }
   
-  #defiway-landing .section-title {
+  #dwp .section-title {
     font-size: var(--font-size-2xl);
     line-height: var(--line-height-48px);
     max-width: 408px;
   }
 
-  #defiway-landing .benefits-grid {
+  #dwp .benefits-grid {
     gap: 64px 20px;
     max-width: 704px;
     justify-content: space-between;
   }
-  #defiway-landing .benefit-icon {
+  #dwp .benefit-icon {
     width: 76px;
     height: 76px;
   }
-  #defiway-landing .benefit-card {
+  #dwp .benefit-card {
     width: 342px;
   }
-  #defiway-landing .benefit-content {
+  #dwp .benefit-content {
     gap: 16px;
     width: 292px;
   }
-  #defiway-landing .benefit-title {
+  #dwp .benefit-title {
     font-size: var(--font-size-20);
     line-height: 28px;
   }
-  #defiway-landing .benefit-description {
+  #dwp .benefit-description {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-base);
   }
@@ -151,43 +151,43 @@
 
 /* Mobile (375) */
 @media (max-width: 768px) {
-  #defiway-landing .benefits-section {
+  #dwp .benefits-section {
     padding-top: var(--space-14);
     padding-bottom: var(--space-14);
     background-image: url("/assets/sections/benefits/benefits-bg-mobile.png");
     background-size: 100% 1224px;
   }
-  #defiway-landing .benefits-section .container {
+  #dwp .benefits-section .container {
     max-width: 329px;
     gap: var(--space-18);
   }
   
-  #defiway-landing .section-title {
+  #dwp .section-title {
     font-size: var(--font-size-28);
     line-height: var(--line-height-40px);
     max-width: 318px;
   }
 
-  #defiway-landing .benefits-grid {
+  #dwp .benefits-grid {
     gap: var(--space-8);
   }
-  #defiway-landing .benefit-icon {
+  #dwp .benefit-icon {
     width: 76px;
     height: 76px;
   }
-  #defiway-landing .benefit-card {
+  #dwp .benefit-card {
     gap: 24px;
     width: 329px;
   }
-  #defiway-landing .benefit-content {
+  #dwp .benefit-content {
     gap: 12px;
     width: 292px;
   }
-  #defiway-landing .benefit-title {
+  #dwp .benefit-title {
     font-size: var(--font-size-20);
     line-height: 28px;
   }
-  #defiway-landing .benefit-description {
+  #dwp .benefit-description {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-base);
   }

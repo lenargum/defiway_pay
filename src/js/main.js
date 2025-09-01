@@ -3,9 +3,24 @@
  * Senior Frontend: Modular, performant, and maintainable code
  */
 
-// DOM utility functions
-const $ = (selector) => document.querySelector(selector);
-const $$ = (selector) => document.querySelectorAll(selector);
+// DOM utility functions with prefix support
+// Detect environment: development (no prefix) vs production (dwp- prefix)
+const isDevelopment = false;
+
+const PREFIX = isDevelopment ? '' : 'dwp-';
+
+const prefixSelector = (selector) => {
+  if (!PREFIX) return selector;
+  
+  // Handle class selectors (.class-name)
+  return selector.replace(/\.([a-zA-Z][\w-]*)/g, `.${PREFIX}$1`);
+};
+
+const $ = (selector) => document.querySelector(prefixSelector(selector));
+const $$ = (selector) => document.querySelectorAll(prefixSelector(selector));
+
+// Helper function to prefix individual class names for classList operations
+const prefixClass = (className) => PREFIX ? `${PREFIX}${className}` : className;
 
 // Debounce utility for performance optimization
 const debounce = (func, wait) => {
@@ -23,14 +38,16 @@ const debounce = (func, wait) => {
 // Mobile menu functionality (toggle 'open' class)
 class MobileMenu {
   constructor() {
-    this.menuBtn = $('#defiway-landing .menu-btn');
-    this.menu = $('#defiway-landing .mobile-menu');
+    this.menuBtn = $('#dwp .menu-btn');
+    this.menu = $('#dwp .mobile-menu');
     this.isOpen = false;
 
     this.init();
   }
 
   init() {
+    console.log(this.menuBtn, this.menu);
+    
     if (this.menuBtn && this.menu) {
       this.menuBtn.addEventListener('click', () => this.toggle());
 
@@ -53,14 +70,14 @@ class MobileMenu {
 
   open() {
     if (!this.menuBtn) return;
-    this.menuBtn.classList.add('open');
+    this.menuBtn.classList.add(prefixClass('open'));
     this.isOpen = true;
     document.body.style.overflow = 'hidden';
   }
 
   close() {
     if (!this.menuBtn) return;
-    this.menuBtn.classList.remove('open');
+    this.menuBtn.classList.remove(prefixClass('open'));
     this.isOpen = false;
     document.body.style.overflow = '';
   }
@@ -70,7 +87,7 @@ class MobileMenu {
 class ConsultationForm {
   constructor() {
     this.form = $('#consultationForm');
-    this.submitBtn = this.form?.querySelector('.submit-btn');
+    this.submitBtn = this.form?.querySelector(prefixSelector('.submit-btn'));
     this.originalBtnText = this.submitBtn?.textContent;
     
     this.init();
@@ -95,7 +112,7 @@ class ConsultationForm {
     let errorMessage = '';
     
     // Remove existing error styling
-    field.classList.remove('error');
+    field.classList.remove(prefixClass('error'));
     this.removeErrorMessage(field);
     
     // Required field validation
@@ -130,17 +147,17 @@ class ConsultationForm {
   }
   
   showFieldError(field, message) {
-    field.classList.add('error');
+    field.classList.add(prefixClass('error'));
     
     const errorElement = document.createElement('div');
-    errorElement.className = 'form-error';
+    errorElement.className = prefixClass('form-error');
     errorElement.textContent = message;
     
     field.parentNode.appendChild(errorElement);
   }
   
   removeErrorMessage(field) {
-    const existingError = field.parentNode.querySelector('.form-error');
+    const existingError = field.parentNode.querySelector(prefixSelector('.form-error'));
     if (existingError) {
       existingError.remove();
     }
@@ -207,18 +224,18 @@ class ConsultationForm {
   showNotification(message, type = 'info') {
     // Create notification element
     const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
+    notification.className = `${prefixClass('notification')} ${prefixClass('notification-' + type)}`;
     notification.textContent = message;
     
     // Add to DOM
     document.body.appendChild(notification);
     
     // Animate in
-    setTimeout(() => notification.classList.add('show'), 100);
+    setTimeout(() => notification.classList.add(prefixClass('show')), 100);
     
     // Remove after delay
     setTimeout(() => {
-      notification.classList.remove('show');
+      notification.classList.remove(prefixClass('show'));
       setTimeout(() => notification.remove(), 300);
     }, 5000);
   }
@@ -259,94 +276,6 @@ class SmoothScroll {
   }
 }
 
-// Intersection Observer for animations
-class ScrollAnimations {
-  constructor() {
-    this.observer = null;
-    this.init();
-  }
-  
-  init() {
-    if (!('IntersectionObserver' in window)) return;
-    
-    this.observer = new IntersectionObserver(
-      (entries) => this.handleIntersection(entries),
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      }
-    );
-    
-    // Observe elements for animation
-    const animatedElements = $$('#defiway-landing .feature-card, #defiway-landing .consultation-content');
-    animatedElements.forEach(el => {
-      el.classList.add('animate-on-scroll');
-      this.observer.observe(el);
-    });
-  }
-  
-  handleIntersection(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animated');
-        this.observer.unobserve(entry.target);
-      }
-    });
-  }
-}
-
-// Performance monitoring
-class PerformanceMonitor {
-  constructor() {
-    this.init();
-  }
-  
-  init() {
-    // Log Core Web Vitals
-    if ('web-vital' in window) {
-      this.measureWebVitals();
-    }
-    
-    // Monitor page load
-    window.addEventListener('load', () => {
-      this.logPageLoadMetrics();
-    });
-  }
-  
-  logPageLoadMetrics() {
-    if ('performance' in window) {
-      const perfData = performance.timing;
-      const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-      
-      console.log('Page Load Performance:', {
-        pageLoadTime: `${pageLoadTime}ms`,
-        domContentLoaded: `${perfData.domContentLoadedEventEnd - perfData.navigationStart}ms`,
-        timeToFirstByte: `${perfData.responseStart - perfData.navigationStart}ms`
-      });
-    }
-  }
-  
-  measureWebVitals() {
-    // This would integrate with web-vitals library if needed
-    // For now, we'll use basic performance API
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'largest-contentful-paint') {
-              console.log('LCP:', entry.startTime);
-            }
-          }
-        });
-        
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (e) {
-        // Silently fail if not supported
-      }
-    }
-  }
-}
-
 // Initialize everything when DOM is ready
 class App {
   constructor() {
@@ -366,12 +295,6 @@ class App {
     new MobileMenu();
     new ConsultationForm();
     new SmoothScroll();
-    new ScrollAnimations();
-    
-    // Initialize performance monitoring in development
-    if (process.env.NODE_ENV === 'development') {
-      new PerformanceMonitor();
-    }
     
     console.log('DefiWay Landing Page initialized successfully');
   }

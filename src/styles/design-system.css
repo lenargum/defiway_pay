@@ -1,7 +1,6 @@
-/* DefiWay Landing Page - Design System */
-/* Based on polished imported styles with glassmorphism design */
+/* DefiWay Pay Landing Page - Design System */
 
-:root {
+#dwp {
   /* 🎨 Colors */
   --color-black: #000000;
   --color-white: #FFFFFF;
@@ -21,12 +20,8 @@
   --gradient-teal-end: rgba(85, 154, 154, 0.2);
   --gradient-accent-start: rgba(83, 190, 198, 0.2);
 
-  --gradient-border-hover: linear-gradient(273.52deg, #C0FEFF 0%, rgba(192, 254, 255, 0) 100%);
-
   
-  /* Border & Outline */
   --border-light: rgba(230, 230, 230, 0.2);
-  --border-dark: rgba(27, 27, 27, 1);
   
   /* Text Opacity */
   --text-muted: 0.7;
@@ -128,30 +123,7 @@
   --hero-height-768: 776px;
   --hero-height-375: 788px;
 
-  /* Section/Card/Icon Sizes */
-  --size-benefit-icon: 96px;
-  --width-benefit-card: 329px;
-  --width-benefits-header: 680px;
-  --height-benefits-section-desktop: 928px;
-
-  --container-hero: 1144px;
-  /* USDT Section Sizes */
-  --width-usdt-title: 600px;
-  --width-usdt-features: 1162px;
-  --gap-usdt-features: 54px;
-  --width-usdt-card: 351px;
-  --height-usdt-card: 180px;
-  --radius-usdt-card: 24px;
-  
-  /* Z-Index Scale */
-  --z-dropdown: 1000;
-  --z-sticky: 1020;
   --z-fixed: 1030;
-  --z-modal-backdrop: 1040;
-  --z-modal: 1050;
-  --z-popover: 1060;
-  --z-tooltip: 1070;
-  --z-toast: 1080;
 }
 
 /* 🎨 Gradients */

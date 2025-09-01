@@ -2,7 +2,7 @@
 /* Based on imported glassmorphism form styles */
 
 /* 📝 Base Input Styles */
-#defiway-landing .form-input {
+#dwp .form-input {
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -24,45 +24,45 @@
   transition: all var(--transition-base);
 }
 
-#defiway-landing .form-input::placeholder {
+#dwp .form-input::placeholder {
   color: var(--color-white);
   opacity: var(--text-muted);
 }
 
 /* Input States */
-#defiway-landing .form-input:focus {
+#dwp .form-input:focus {
   outline: none;
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(72, 197, 199, 0.1);
   background: rgba(255, 255, 255, 0.02);
 }
 
-#defiway-landing .form-input:hover {
+#dwp .form-input:hover {
   border-color: rgba(230, 230, 230, 0.3);
 }
 
 /* Input with content (filled state) */
-#defiway-landing .form-input:not(:placeholder-shown) {
+#dwp .form-input:not(:placeholder-shown) {
   background: rgba(255, 255, 255, 0.02);
   border-color: rgba(230, 230, 230, 0.3);
 }
 
 /* Input Error State */
-#defiway-landing .form-input.error {
+#dwp .form-input.error {
   border-color: #ff6b6b;
   box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
 }
 
-#defiway-landing .form-input.error::placeholder {
+#dwp .form-input.error::placeholder {
   color: #ff6b6b;
 }
 
 /* 📞 Phone Input Specific */
-#defiway-landing .form-input-phone {
+#dwp .form-input-phone {
   padding-left: var(--space-3);
 }
 
-#defiway-landing .phone-prefix {
+#dwp .phone-prefix {
   display: flex;
   align-items: center;
   padding: 0 var(--space-3);
@@ -74,7 +74,7 @@
 }
 
 /* 📧 Email Input */
-#defiway-landing .form-input-email {
+#dwp .form-input-email {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' opacity='0.5'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'%3E%3C/path%3E%3Cpolyline points='22,6 12,13 2,6'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right var(--space-4) center;
@@ -83,50 +83,50 @@
 }
 
 /* 📝 Textarea */
-#defiway-landing .form-textarea {
+#dwp .form-textarea {
   min-height: 120px;
   resize: vertical;
   padding-top: var(--space-4);
   padding-bottom: var(--space-4);
 }
 
-#defiway-landing .form-textarea::placeholder {
+#dwp .form-textarea::placeholder {
   color: var(--color-white);
   opacity: var(--text-muted);
 }
 
 /* 📝 Form Groups */
-#defiway-landing .form-group {
+#dwp .form-group {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
   margin-bottom: var(--space-6);
 }
 
-#defiway-landing .form-row {
+#dwp .form-row {
   display: flex;
   gap: var(--space-6);
 
   position: relative;
 }
 
-#defiway-landing .form-col {
+#dwp .form-col {
   display: flex;
   flex-direction: column;
 
   position: relative;
 }
 
-#defiway-landing .form-row .form-col {
+#dwp .form-row .form-col {
   flex: 1;
 }
 
-#defiway-landing .form-row .form-group {
+#dwp .form-row .form-group {
   flex: 1;
 }
 
 /* 🏷️ Form Labels */
-#defiway-landing .form-label {
+#dwp .form-label {
   font-family: var(--font-family);
   font-weight: var(--font-medium);
   font-size: var(--font-size-sm);
@@ -135,14 +135,14 @@
   margin-bottom: var(--space-2);
 }
 
-#defiway-landing .form-label.required::after {
+#dwp .form-label.required::after {
   content: '*';
   color: var(--color-primary);
   margin-left: var(--space-1);
 }
 
 /* ❌ Form Error Messages */
-#defiway-landing .form-error {
+#dwp .form-error {
   position: absolute;
   top: 100%;
   left: 0;
@@ -155,14 +155,14 @@
 }
 
 /* ✅ Checkbox Styles */
-#defiway-landing .consent-checkbox {
+#dwp .consent-checkbox {
   display: flex;
   align-items: center;
   gap: var(--space-4);
   cursor: pointer;
 }
 
-#defiway-landing .consent-checkbox input[type="checkbox"] {
+#dwp .consent-checkbox input[type="checkbox"] {
   position: absolute;
   opacity: 0;
   width: 1px;
@@ -175,7 +175,7 @@
   overflow: hidden;
 }
 
-#defiway-landing .checkmark {
+#dwp .checkmark {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,29 +189,29 @@
   flex-shrink: 0;
 }
 
-#defiway-landing .consent-checkbox input[type="checkbox"]:checked + .checkmark {
+#dwp .consent-checkbox input[type="checkbox"]:checked + .checkmark {
   background: var(--color-primary);
   border-color: var(--color-primary);
 }
 
-#defiway-landing .check-icon {
+#dwp .check-icon {
   width: var(--space-4);
   height: var(--space-4);
   opacity: 0;
   transition: var(--transition-base);
 }
 
-#defiway-landing .consent-checkbox input[type="checkbox"]:checked + .checkmark .check-icon {
+#dwp .consent-checkbox input[type="checkbox"]:checked + .checkmark .check-icon {
   opacity: 1;
 }
 
 /* Keyboard focus ring (a11y) */
-#defiway-landing .consent-checkbox input[type="checkbox"]:focus-visible + .checkmark {
+#dwp .consent-checkbox input[type="checkbox"]:focus-visible + .checkmark {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
-#defiway-landing .consent-text {
+#dwp .consent-text {
   font-family: var(--font-family);
   font-weight: var(--font-normal);
   font-size: var(--font-size-sm);
@@ -219,7 +219,7 @@
   color: var(--color-white);
 }
 
-#defiway-landing .checkbox-wrapper {
+#dwp .checkbox-wrapper {
   display: flex;
   align-items: flex-start;
   gap: var(--space-3);
@@ -227,13 +227,13 @@
   margin-bottom: var(--space-6);
 }
 
-#defiway-landing .checkbox-input {
+#dwp .checkbox-input {
   opacity: 0;
   position: absolute;
   pointer-events: none;
 }
 
-#defiway-landing .checkbox-custom {
+#dwp .checkbox-custom {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -248,12 +248,12 @@
 }
 
 /* Checkbox checked state */
-#defiway-landing .checkbox-input:checked + .checkbox-custom {
+#dwp .checkbox-input:checked + .checkbox-custom {
   background: var(--color-primary);
   border-color: var(--color-primary);
 }
 
-#defiway-landing .checkbox-input:checked + .checkbox-custom::after {
+#dwp .checkbox-input:checked + .checkbox-custom::after {
   content: '';
   width: 16px;
   height: 16px;
@@ -265,18 +265,18 @@
 }
 
 /* Checkbox hover state */
-#defiway-landing .checkbox-wrapper:hover .checkbox-custom {
+#dwp .checkbox-wrapper:hover .checkbox-custom {
   border-color: var(--color-primary);
   background: rgba(72, 197, 199, 0.1);
 }
 
 /* Checkbox focus state */
-#defiway-landing .checkbox-input:focus + .checkbox-custom {
+#dwp .checkbox-input:focus + .checkbox-custom {
   box-shadow: 0 0 0 3px rgba(72, 197, 199, 0.2);
 }
 
 /* 🏷️ Checkbox Label */
-#defiway-landing .checkbox-label {
+#dwp .checkbox-label {
   font-family: var(--font-family);
   font-weight: var(--font-normal);
   font-size: var(--font-size-sm);
@@ -286,19 +286,19 @@
   cursor: pointer;
 }
 
-#defiway-landing .checkbox-label a {
+#dwp .checkbox-label a {
   color: var(--color-primary);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-#defiway-landing .checkbox-label a:hover {
+#dwp .checkbox-label a:hover {
   color: var(--color-white);
   text-decoration: underline;
 }
 
 /* 🔘 Radio Buttons */
-#defiway-landing .radio-wrapper {
+#dwp .radio-wrapper {
   display: flex;
   align-items: center;
   gap: var(--space-3);
@@ -306,13 +306,13 @@
   margin-bottom: var(--space-4);
 }
 
-#defiway-landing .radio-input {
+#dwp .radio-input {
   opacity: 0;
   position: absolute;
   pointer-events: none;
 }
 
-#defiway-landing .radio-custom {
+#dwp .radio-custom {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -323,11 +323,11 @@
   position: relative;
 }
 
-#defiway-landing .radio-input:checked + .radio-custom {
+#dwp .radio-input:checked + .radio-custom {
   border-color: var(--color-primary);
 }
 
-#defiway-landing .radio-input:checked + .radio-custom::after {
+#dwp .radio-input:checked + .radio-custom::after {
   content: '';
   width: 8px;
   height: 8px;
@@ -339,16 +339,16 @@
   transform: translate(-50%, -50%);
 }
 
-#defiway-landing .radio-wrapper:hover .radio-custom {
+#dwp .radio-wrapper:hover .radio-custom {
   border-color: var(--color-primary);
 }
 
-#defiway-landing .radio-input:focus + .radio-custom {
+#dwp .radio-input:focus + .radio-custom {
   box-shadow: 0 0 0 3px rgba(72, 197, 199, 0.2);
 }
 
 /* 🏷️ Radio Label */
-#defiway-landing .radio-label {
+#dwp .radio-label {
   font-family: var(--font-family);
   font-weight: var(--font-normal);
   font-size: var(--font-size-base);
@@ -359,41 +359,41 @@
 
 /* 📱 Responsive Form Adjustments */
 @media (max-width: 768px) {
-  #defiway-landing .form-row {
+  #dwp .form-row {
     flex-direction: column;
     gap: var(--space-3);
   }
   
-  #defiway-landing .form-input {
+  #dwp .form-input {
     min-height: 52px;
     padding: var(--space-3) var(--space-4);
   }
   
-  #defiway-landing .phone-prefix {
+  #dwp .phone-prefix {
     padding: 0 var(--space-2);
     margin-right: var(--space-2);
   }
 }
 
 @media (max-width: 480px) {
-  #defiway-landing .form-input {
+  #dwp .form-input {
     min-height: 48px;
     font-size: var(--font-size-sm);
   }
   
-  #defiway-landing .checkbox-wrapper {
+  #dwp .checkbox-wrapper {
     align-items: flex-start;
     gap: var(--space-2);
   }
   
-  #defiway-landing .checkbox-label,
-  #defiway-landing .radio-label {
+  #dwp .checkbox-label,
+  #dwp .radio-label {
     font-size: var(--font-size-sm);
   }
 }
 
 /* 🎨 Form Container Styling */
-#defiway-landing .form-container {
+#dwp .form-container {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
@@ -401,7 +401,7 @@
   backdrop-filter: var(--backdrop-blur);
 }
 
-#defiway-landing .form-title {
+#dwp .form-title {
   font-family: var(--font-family);
   font-weight: var(--font-semibold);
   font-size: var(--font-size-xl);
@@ -412,13 +412,13 @@
 }
 
 /* 📤 Submit Button in Forms */
-#defiway-landing .form-submit {
+#dwp .form-submit {
   width: 100%;
   margin-top: var(--space-4);
 }
 
 /* 💡 Form Hints */
-#defiway-landing .form-hint {
+#dwp .form-hint {
   font-size: var(--font-size-sm);
   color: var(--color-white);
   opacity: var(--text-muted);

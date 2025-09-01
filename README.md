@@ -28,7 +28,9 @@ npm run build
 npm run preview
 ```
 
-Default dev server runs at http://localhost:3000 (see terminal output).
+Change `isDevelopment` in `main.js` to true for dev testing without class prefixes.
+
+Default dev server runs at http://localhost:3001 (see terminal output).
 
 ## Project Structure
 
@@ -113,7 +115,6 @@ Header external links map to live subdomains for parity with the Pay site:
 - MobileMenu (structure prepared; only activates if corresponding elements exist)
 - ConsultationForm: field-level validation, basic submit simulation, accessible errors
 - SmoothScroll: in-page anchor scrolling; centers target in viewport and focuses first field
-- ScrollAnimations: intersection-based progressive reveal (if present)
 
 Smooth scroll details:
 
@@ -132,12 +133,6 @@ window.scrollTo({ top: targetPosition, behavior: 'smooth' });
 - `base.css` handles resets, containers, and accessibility (`:focus-visible`)
 - `buttons.css` provides gradient borders via masked pseudo-elements and motion fallbacks
 - `forms.css` standardizes inputs and the consent checkbox (visually hidden input + custom check)
-
-Images use responsive-safe defaults:
-
-```css
-img { max-width: 100%; height: auto; }
-```
 
 ## Accessibility
 

@@ -1,6 +1,6 @@
 /* DefiWay Landing Page - Partners & Contact Section (6.css) */
 
-#defiway-landing .partners-contact-sections-wrapper {
+#dwp .partners-contact-sections-wrapper {
     background-image: url("/assets/sections/partners-contacts/partners-background.png");
     background-size: cover;
     background-position: center;
@@ -14,7 +14,7 @@
     padding: var(--space-38) 0 262px;
 }
 
-#defiway-landing .partners-section .container {
+#dwp .partners-section .container {
   max-width: var(--container-3xl);
 
   display: flex;
@@ -23,7 +23,7 @@
 }
 
 /* Partners Header */
-#defiway-landing .partners-header {
+#dwp .partners-header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,23 +33,23 @@
   margin-right: auto;
 }
 
-#defiway-landing .partners-header .section-title {
+#dwp .partners-header .section-title {
   max-width: none;
 }
 
-#defiway-landing .partners-header .section-description {
+#dwp .partners-header .section-description {
   max-width: 580px;
 }
 
 /* Partners Grid */
-#defiway-landing .partners-grid {
+#dwp .partners-grid {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-14);
 }
 
-#defiway-landing .partner-logos {
+#dwp .partner-logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -57,7 +57,7 @@
   max-width: var(--container-3xl);
 }
 
-#defiway-landing .partner-logo {
+#dwp .partner-logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,29 +72,29 @@
   cursor: pointer;
 }
 
-#defiway-landing .partner-logo .logo-default,
-#defiway-landing .partner-logo .logo-hover {
+#dwp .partner-logo .logo-default,
+#dwp .partner-logo .logo-hover {
   width: 100%;
   height: 100%;
   transition: var(--transition-base);
 }
 
-#defiway-landing .partner-logo .logo-hover {
+#dwp .partner-logo .logo-hover {
   position: absolute;
   opacity: 0;
 }
 
-#defiway-landing .partner-logo:hover .logo-default,
-#defiway-landing .partner-logo:focus .logo-default {
+#dwp .partner-logo:hover .logo-default,
+#dwp .partner-logo:focus .logo-default {
   opacity: 0;
 }
 
-#defiway-landing .partner-logo:hover .logo-hover,
-#defiway-landing .partner-logo:focus .logo-hover {
+#dwp .partner-logo:hover .logo-hover,
+#dwp .partner-logo:focus .logo-hover {
   opacity: 1;
 }
 
-#defiway-landing .partner-names {
+#dwp .partner-names {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -102,7 +102,7 @@
   max-width: 924px;
 }
 
-#defiway-landing .partner-name {
+#dwp .partner-name {
   font-family: var(--font-family);
   font-weight: var(--font-normal);
   font-size: var(--font-size-sm);
@@ -112,63 +112,63 @@
   cursor: pointer;
 }
 
-#defiway-landing .partner-name:hover {
+#dwp .partner-name:hover {
   opacity: 1;
   color: var(--color-primary);
 }
 
 /* 1440 adjustments (keeps desktop sizing, ensure layout breathes) */
 @media (max-width: 1440px) and (min-width: 1024px) {
-  #defiway-landing .partners-contact-sections-wrapper {
+  #dwp .partners-contact-sections-wrapper {
     
   }
 }
 
 /* Tablet 768–1023: logos 161x96, tighter header spacing */
 @media (max-width: 1023px) and (min-width: 768px) {
-  #defiway-landing .partners-contact-sections-wrapper {
+  #dwp .partners-contact-sections-wrapper {
     gap: var(--space-33);
     padding-top: var(--space-20);
     padding-bottom: var(--space-33);
   }
-  #defiway-landing .partners-section .container {
+  #dwp .partners-section .container {
     gap: var(--space-20);
   }
-  #defiway-landing .partners-header {
+  #dwp .partners-header {
     gap: var(--space-6);
   }
-  #defiway-landing .partner-logo {
+  #dwp .partner-logo {
     width: 161px;
     height: 96px;
     border-radius: var(--radius-md);
   }
-  #defiway-landing .partner-names {
+  #dwp .partner-names {
     display: none;
   }
 }
 
 /* Mobile ≤768: logos 160x96, smaller gaps */
 @media (max-width: 768px) {
-  #defiway-landing .partners-contact-sections-wrapper {
+  #dwp .partners-contact-sections-wrapper {
     gap: var(--space-28);
     padding-top: var(--space-14);
     padding-bottom: var(--space-33);
   }
-  #defiway-landing .partners-section .container {
+  #dwp .partners-section .container {
     gap: var(--space-14);
   }
-  #defiway-landing .partners-header {
+  #dwp .partners-header {
     gap: var(--space-4);
   }
-  #defiway-landing .partner-logos {
+  #dwp .partner-logos {
     gap: 14px;
   }
-  #defiway-landing .partner-logo {
+  #dwp .partner-logo {
     width: 160px;
     height: 96px;
     border-radius: 16px;
   }
-  #defiway-landing .partner-names {
+  #dwp .partner-names {
     display: none;
   }
 }

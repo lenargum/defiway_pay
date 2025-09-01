@@ -82,6 +82,8 @@
   display: flex;
   align-items: center;
   gap: 24px;
+
+  max-width: 360px;
 }
 
 #dwp .other-benefit-icon-wrapper {
@@ -184,6 +186,11 @@
 
     padding: 44px;
     gap: 48px;
+
+
+    --other-benefits-background-image: url("/assets/sections/other-benefits/other-benefits-bg-pattern-tablet.svg");
+    background-size: 326px 403px, auto auto, auto auto;
+    background-position: bottom right, 0% 0%, 0% 0%;
   }
   #dwp .other-benefits-title {
     max-width: none;
@@ -191,10 +198,15 @@
     line-height: var(--line-height-40px);
   }
   #dwp .other-benefits-grid {
-    max-width: 349px;
+    max-width: 378px;
     grid-template-columns: 1fr;
     row-gap: 28px;
   }
+
+  #dwp .other-benefit-item {
+    max-width: none;
+  }
+
   #dwp .other-benefit-icon-wrapper {
     width: 40px;
     height: 40px;
@@ -238,6 +250,9 @@
   #dwp .other-benefits-grid {
     grid-template-columns: 1fr;
     row-gap: 28px;
+  }
+  #dwp .other-benefit-item {
+    max-width: none;
   }
   #dwp .other-benefit-icon-wrapper {
     width: 48px;

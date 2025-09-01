@@ -1,17 +1,17 @@
 /* DefiWay Landing Page - Partners & Contact Section (6.css) */
 
 #dwp .partners-contact-sections-wrapper {
-    background-image: url("/assets/sections/partners-contacts/partners-background.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+  background-image: url("/assets/sections/partners-contacts/partners-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 
-    display: flex;
-    flex-direction: column;
-    gap: 252px;
+  display: flex;
+  flex-direction: column;
+  gap: 252px;
 
-    padding: var(--space-38) 0 262px;
+  padding: var(--space-38) 0 262px;
 }
 
 #dwp .partners-section .container {
@@ -72,6 +72,37 @@
   cursor: pointer;
 }
 
+#dwp .partner-logo#hp {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+#dwp .partner-logo#hp:hover,
+#dwp .partner-logo#hp:focus {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    radial-gradient(
+      99.48% 100% at 50% 100%,
+      rgba(72, 197, 199, 0.3) 0%,
+      rgba(72, 197, 199, 0.03) 100%
+    );
+}
+
+#dwp .partner-logo#hp .logo-default,
+#dwp .partner-logo#hp .logo-hover {
+  width: 154px;
+  height: 58px;
+  transition: var(--transition-base);
+}
+
 #dwp .partner-logo .logo-default,
 #dwp .partner-logo .logo-hover {
   width: 100%;
@@ -120,7 +151,6 @@
 /* 1440 adjustments (keeps desktop sizing, ensure layout breathes) */
 @media (max-width: 1440px) and (min-width: 1024px) {
   #dwp .partners-contact-sections-wrapper {
-    
   }
 }
 
@@ -140,8 +170,15 @@
   #dwp .partner-logo {
     width: 161px;
     height: 96px;
-    border-radius: var(--radius-md);
+    border-radius: 16px;
   }
+
+  #dwp .partner-logo#hp .logo-default,
+  #dwp .partner-logo#hp .logo-hover {
+    width: 118px;
+    height: 44px;
+  }
+
   #dwp .partner-names {
     display: none;
   }
@@ -168,6 +205,13 @@
     height: 96px;
     border-radius: 16px;
   }
+
+  #dwp .partner-logo#hp .logo-default,
+  #dwp .partner-logo#hp .logo-hover {
+    width: 118px;
+    height: 44px;
+  }
+
   #dwp .partner-names {
     display: none;
   }

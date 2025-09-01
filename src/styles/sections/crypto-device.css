@@ -67,6 +67,9 @@
 
 #dwp .crypto-device-section .section-description {
   max-width: 429px; /* reference */
+  text-align: start;
+
+  font-size: var(--font-size-base);
 }
 
 #dwp .device-features {
@@ -159,7 +162,7 @@
   #dwp .device-info .btn { display: none; }
   #dwp .device-head { gap: 16px; }
   #dwp .device-title { font-size: var(--font-size-xl); line-height: var(--line-height-36px, 36px); }
-  #dwp .crypto-device-section .section-description { max-width: 309px; font-size: var(--font-size-sm); }
+  #dwp .crypto-device-section .section-description { max-width: 309px; font-size: var(--font-size-sm); text-align: center; }
   #dwp .device-features { max-width: 272px; gap: 28px; }
   #dwp .device-feature { height: 40px; }
   #dwp .feature-number { width: 40px; height: 40px; }

@@ -154,6 +154,12 @@
   color: #ff6b6b;
 }
 
+@media (max-width: 767px) {
+  #dwp .form-error {
+    position: static;
+  }
+}
+
 /* ✅ Checkbox Styles */
 #dwp .consent-checkbox {
   display: flex;

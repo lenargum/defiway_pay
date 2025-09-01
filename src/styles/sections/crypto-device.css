@@ -2,7 +2,8 @@
 
 /* Crypto Device Section */
 #defiway-landing .crypto-device-section {
-  padding: 114px 0;
+  padding-top: 114px;
+  padding-bottom: 114px;
   background: var(--color-black);
 }
 
@@ -17,7 +18,8 @@
     url('/assets/sections/device/crypto-device.png'),
     linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(83, 190, 198, 0.2) 100%);
   background-size: cover;
-  background-position: center bottom; /* reference bottom alignment */
+  background-position: right bottom, 0% 0%;
+  background-repeat: no-repeat;
 }
 
 #defiway-landing .crypto-device-panel::after {
@@ -25,7 +27,7 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 2px; /* border thickness */
+  padding: 0 2px 2px 2px; /* border thickness */
   background: linear-gradient(359.85deg, rgba(185, 242, 243, 0.2) 0.13%, rgba(185, 242, 243, 0) 66.3%);
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -38,7 +40,6 @@
 #defiway-landing .crypto-device-content {
   display: block;
   max-width: var(--container-2xl);
-  margin: 0 auto;
 }
 
 #defiway-landing .device-info {
@@ -64,11 +65,7 @@
   line-height: 1.44; /* ≈ 52px */
 }
 
-#defiway-landing .device-description {
-  font-weight: var(--font-normal);
-  font-size: var(--font-size-base); /* 16px */
-  line-height: 1.75; /* ≈ 28px */
-  color: var(--color-white);
+#defiway-landing .crypto-device-section .section-description {
   max-width: 429px; /* reference */
 }
 
@@ -130,3 +127,41 @@
 }
 
 #defiway-landing .device-image { display: none; }
+
+/* 1440 adjustments */
+@media (max-width: 1440px) and (min-width: 1024px) {
+  #defiway-landing .crypto-device-section { padding-top: 114px; padding-bottom: 114px; }
+}
+
+/* Tablet (768) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  #defiway-landing .crypto-device-section { padding-top: var(--space-20); padding-bottom: var(--space-20); }
+  #defiway-landing .crypto-device-panel { border-radius: 40px; padding: 44px; background-size: auto 332px, auto auto; }
+  #defiway-landing .crypto-device-panel::after { border-radius: 40px; }
+  #defiway-landing .crypto-device-content { max-width: 704px; }
+  #defiway-landing .device-info { max-width: 473px; gap: 40px; }
+  #defiway-landing .device-head { gap: 20px; }
+  #defiway-landing .device-title { font-size: var(--font-size-28); line-height: var(--line-height-40px); }
+  #defiway-landing .crypto-device-section .section-description { max-width: 473px; }
+  #defiway-landing .device-features { max-width: 359px; gap: 24px; }
+  #defiway-landing .device-feature { height: 40px; gap: 20px; }
+  #defiway-landing .feature-number { width: 40px; height: 40px; }
+  #defiway-landing .feature-text { font-size: var(--font-size-base); }
+}
+
+/* Mobile (375) */
+@media (max-width: 768px) {
+  #defiway-landing .crypto-device-section { padding-top: var(--space-14); padding-bottom: var(--space-14); }
+  #defiway-landing .crypto-device-panel { border-radius: 24px; padding: 44px 12px 420px; background-size: auto 425px, auto auto; background-position: 80% bottom}
+  #defiway-landing .crypto-device-panel::after { border-radius: 24px; }
+  #defiway-landing .crypto-device-content { display: flex; flex-direction: column; align-items: center; }
+  #defiway-landing .device-info { max-width: 309px; gap: 28px; align-items: center; text-align: center; }
+  #defiway-landing .device-info .btn { display: none; }
+  #defiway-landing .device-head { gap: 16px; }
+  #defiway-landing .device-title { font-size: var(--font-size-xl); line-height: var(--line-height-36px, 36px); }
+  #defiway-landing .crypto-device-section .section-description { max-width: 309px; font-size: var(--font-size-sm); }
+  #defiway-landing .device-features { max-width: 272px; gap: 28px; }
+  #defiway-landing .device-feature { height: 40px; }
+  #defiway-landing .feature-number { width: 40px; height: 40px; }
+  #defiway-landing .feature-text { font-size: var(--font-size-sm); text-align: start; line-height: var(--line-height-20px); }
+}

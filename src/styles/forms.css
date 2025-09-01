@@ -185,6 +185,8 @@
   border-radius: var(--radius-sm);
   transition: var(--transition-base);
   border: 1px solid var(--border-light);
+
+  flex-shrink: 0;
 }
 
 #defiway-landing .consent-checkbox input[type="checkbox"]:checked + .checkmark {
@@ -359,7 +361,7 @@
 @media (max-width: 768px) {
   #defiway-landing .form-row {
     flex-direction: column;
-    gap: 0;
+    gap: var(--space-3);
   }
   
   #defiway-landing .form-input {

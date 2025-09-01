@@ -79,12 +79,10 @@
     <div id="defiway-landing">
       <header class="header">
         <div class="header-container">
-          <!-- Logo -->
           <a href="/" class="header-logo">
             <img src="/assets/logo.png" alt="DefiWay" class="logo" />
           </a>
 
-          <!-- Menu -->
           <nav class="header-nav">
             <a href="https://bridge.defiway.com" class="nav-item">Bridge</a>
             <a href="https://wallet.defiway.com" class="nav-item">Wallet</a>
@@ -92,15 +90,78 @@
             <a href="https://payroll.defiway.com" class="nav-item">PayRoll</a>
             <a href="https://defiway.com/treasury" class="nav-item">Treasury</a>
             <a href="https://defiway.com" class="nav-item">Company</a>
-            <a href="#" class="nav-item"
-              >Resources</a
-            >
+            <a href="#" class="nav-item">Resources</a>
           </nav>
 
-          <!-- Button using design system -->
           <a href="#contact" class="btn btn-secondary header-cta">
             <span class="btn-text">Get in touch</span>
           </a>
+
+          <button class="menu-btn tablet-mobile-only">
+            <span class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+
+          <div class="mobile-menu tablet-mobile-only">
+            <div class="mobile-menu-content">
+              <nav class="header-nav">
+                <a href="https://bridge.defiway.com" class="nav-item">Bridge</a>
+                <a href="https://wallet.defiway.com" class="nav-item">Wallet</a>
+                <a href="https://pay.defiway.com/" class="nav-item active">Pay</a>
+                <a href="https://payroll.defiway.com" class="nav-item">PayRoll</a>
+                <a href="https://defiway.com/treasury" class="nav-item">Treasury</a>
+                <a href="https://defiway.com" class="nav-item">Company</a>
+                <a href="#" class="nav-item">Resources</a>
+              </nav>
+    
+              <a href="#contact" class="btn btn-secondary">
+                <span class="btn-text">Get in touch</span>
+              </a>
+            </div>
+
+            <div class="mobile-menu-social">
+              <p class="mobile-menu-social-title">Follow us</p>
+              <div class="social-links">
+                <a
+                  href="https://twitter.com/Defiwayapp?s=20"
+                  class="social-link"
+                  aria-label="X/Twitter"
+                >
+                  <img
+                    src="/assets/icons/social/twitter.svg"
+                    alt="X/Twitter"
+                    class="social-icon"
+                  />
+                </a>
+                <a
+                  href="https://discord.gg/Uvc8h73ecU"
+                  class="social-link"
+                  aria-label="Discord"
+                >
+                  <img
+                    src="/assets/icons/social/discord.svg"
+                    alt="Discord"
+                    class="social-icon"
+                  />
+                </a>
+                <a
+                  href="https://t.me/defiwayapp"
+                  class="social-link"
+                  aria-label="Telegram"
+                >
+                  <img
+                    src="/assets/icons/social/telegram.svg"
+                    alt="Telegram"
+                    class="social-icon"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -149,19 +210,20 @@
           </div>
         </section>
 
-        <section class="benefits-section bg-glass-secondary" id="benefits">
+        <section class="benefits-section" id="benefits">
           <div class="container">
-            <div class="section-header">
-              <div class="section-badge">
-                <span class="badge-text">Benefits for business</span>
+            <div class="section-header-with-cta-wrapper">
+              <div class="section-header">
+                <div class="section-badge">Benefits for business</div>
+                <h2 class="section-title text-title gradient-text-secondary">
+                  The Benefits of Working<br />With Defiway
+                </h2>
               </div>
-              <h2 class="section-title text-title gradient-text-secondary">
-                The Benefits of Working<br />With Defiway
-              </h2>
               <a href="#contact" class="btn btn-secondary"
                 >Get free consultation</a
               >
             </div>
+
             <div class="benefits-grid">
               <div class="benefit-card">
                 <img
@@ -230,7 +292,7 @@
                     <h2 class="device-title gradient-text-primary">
                       One Device. Full Crypto Acceptance
                     </h2>
-                    <p class="device-description">
+                    <p class="section-description">
                       Defiway POS terminals let your business accept crypto
                       payments just like fiat — safely and instantly
                     </p>
@@ -267,12 +329,17 @@
         <section class="usdt-section" id="usdt">
           <div class="container">
             <div class="usdt-content">
-              <div class="section-badge">
-                <span class="badge-text">USDT forever</span>
+              <div class="section-header">
+                <div class="section-badge">USDT forever</div>
+                <div class="section-header-with-cta-wrapper">
+                  <h2 class="usdt-title gradient-text-secondary">
+                    Why do We use USDT for payments?
+                  </h2>
+                  <a href="#contact" class="btn btn-secondary mobile-only"
+                    >Get free consultation</a
+                  >
+                </div>
               </div>
-              <h2 class="usdt-title gradient-text-secondary">
-                Why do We use USDT for payments?
-              </h2>
               <div class="usdt-features">
                 <div class="usdt-feature">
                   <h3 class="usdt-feature-title text-feature-title">
@@ -302,105 +369,88 @@
           </div>
         </section>
 
-        <section class="additional-benefits-section" id="additional-benefits">
+        <section class="other-benefits-section" id="other-benefits">
           <div class="container">
-            <div class="additional-benefits-wrap">
-              <div class="additional-benefits-content">
-                <div class="benefits-text">
-                  <h2 class="benefits-title text-title gradient-text-primary">
-                    What other benefits will<br />my business get?
-                  </h2>
-                  <div class="benefits-grid-2">
-                    <div class="benefits-column">
-                      <div class="benefit-item">
-                        <div class="benefit-icon-wrapper">
-                          <img
-                            src="/assets/icons/features/money.svg"
-                            alt="Higher Spend"
-                            class="benefit-small-icon"
-                          />
-                        </div>
-                        <div class="benefit-text">
-                          <h3 class="benefit-small-title">Higher Spend</h3>
-                          <p class="benefit-small-description">
-                            Crypto users tend to have stronger<br />purchasing
-                            power
-                          </p>
-                        </div>
-                      </div>
-                      <div class="benefit-item">
-                        <div class="benefit-icon-wrapper">
-                          <img
-                            src="/assets/icons/features/shield.svg"
-                            alt="Transparency"
-                            class="benefit-small-icon"
-                          />
-                        </div>
-                        <div class="benefit-text">
-                          <h3 class="benefit-small-title">Transparency</h3>
-                          <p class="benefit-small-description">
-                            View all transactions and reports in real time.<br />You
-                            choose withdrawal terms and currency
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="benefits-column">
-                      <div class="benefit-item">
-                        <div class="benefit-icon-wrapper">
-                          <img
-                            src="/assets/icons/features/scale.svg"
-                            alt="Scalability"
-                            class="benefit-small-icon"
-                          />
-                        </div>
-                        <div class="benefit-text">
-                          <h3 class="benefit-small-title">Scalability</h3>
-                          <p class="benefit-small-description">
-                            Attract crypto-enthusiasts and accept<br />payments
-                            from clients around the world
-                          </p>
-                        </div>
-                      </div>
-                      <div class="benefit-item">
-                        <div class="benefit-icon-wrapper">
-                          <img
-                            src="/assets/icons/features/fast.svg"
-                            alt="Modern Image"
-                            class="benefit-small-icon"
-                          />
-                        </div>
-                        <div class="benefit-text">
-                          <h3 class="benefit-small-title">Modern Image</h3>
-                          <p class="benefit-small-description">
-                            Emphasize your tech-savviness and stand<br />out
-                            from competitors
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="#contact" class="btn btn-secondary"
-                    >Get free consultation</a
-                  >
+            <h2 class="other-benefits-title gradient-text-primary">
+              What other benefits will my business get?
+            </h2>
+            <div class="other-benefits-grid">
+              <div class="other-benefit-item">
+                <div class="other-benefit-icon-wrapper">
+                  <img
+                    src="/assets/icons/features/money.svg"
+                    alt="Higher Spend"
+                    class="other-benefit-small-icon"
+                  />
+                </div>
+                <div class="other-benefit-text">
+                  <h3 class="other-benefit-small-title">Higher Spend</h3>
+                  <p class="other-benefit-small-description">
+                    Crypto users tend to have stronger<br />purchasing power
+                  </p>
                 </div>
               </div>
-              <div class="benefits-visual">
-                <img
-                  src="/assets/sections/other-benefits/other-benefits-bg-pattern.svg"
-                  alt="Benefits Pattern"
-                  class="benefits-pattern"
-                />
-                <img
-                  src="/assets/logo-icon.png"
-                  alt="Defiway Logo"
-                  class="benefits-logo"
-                />
-                <div class="light-effect light-effect-400"></div>
-                <div class="light-effect light-effect-800"></div>
-                <div class="light-effect light-effect-400"></div>
+              <div class="other-benefit-item">
+                <div class="other-benefit-icon-wrapper">
+                  <img
+                    src="/assets/icons/features/shield.svg"
+                    alt="Transparency"
+                    class="other-benefit-small-icon"
+                  />
+                </div>
+                <div class="other-benefit-text">
+                  <h3 class="other-benefit-small-title">Transparency</h3>
+                  <p class="other-benefit-small-description">
+                    View all transactions and reports in real time.<br />You
+                    choose withdrawal terms and currency
+                  </p>
+                </div>
+              </div>
+              <div class="other-benefit-item">
+                <div class="other-benefit-icon-wrapper">
+                  <img
+                    src="/assets/icons/features/scale.svg"
+                    alt="Scalability"
+                    class="other-benefit-small-icon"
+                  />
+                </div>
+                <div class="other-benefit-text">
+                  <h3 class="other-benefit-small-title">Scalability</h3>
+                  <p class="other-benefit-small-description">
+                    Attract crypto-enthusiasts and accept<br />payments from
+                    clients around the world
+                  </p>
+                </div>
+              </div>
+              <div class="other-benefit-item">
+                <div class="other-benefit-icon-wrapper">
+                  <img
+                    src="/assets/icons/features/fast.svg"
+                    alt="Modern Image"
+                    class="other-benefit-small-icon"
+                  />
+                </div>
+                <div class="other-benefit-text">
+                  <h3 class="other-benefit-small-title">Modern Image</h3>
+                  <p class="other-benefit-small-description">
+                    Emphasize your tech-savviness and stand<br />out from
+                    competitors
+                  </p>
+                </div>
               </div>
             </div>
+            <a href="#contact" class="btn btn-secondary desktop-only"
+              >Get free consultation</a
+            >
+            <div
+              class="other-benefits-light-effect other-benefits-light-effect-400 desktop-only"
+            ></div>
+            <div
+              class="other-benefits-light-effect other-benefits-light-effect-800 desktop-only"
+            ></div>
+            <div
+              class="other-benefits-light-effect other-benefits-light-effect-400 desktop-only"
+            ></div>
           </div>
         </section>
 
@@ -408,10 +458,8 @@
           <section class="partners-section" id="partners">
             <div class="container">
               <!-- Partners Header -->
-              <div class="partners-header" >
-                <div class="section-badge">
-                  <span class="badge-text">Our partners</span>
-                </div>
+              <div class="partners-header">
+                <div class="section-badge">Our partners</div>
                 <h2 class="section-title text-title gradient-text-secondary">
                   Trusted by Industry Leaders
                 </h2>
@@ -424,7 +472,7 @@
               <!-- Partners Grid -->
               <div class="partners-grid">
                 <div class="partner-logos">
-                  <a href="https://lichi.com/" class="partner-logo" data-partner="lichi">
+                  <div class="partner-logo" data-partner="lichi">
                     <img
                       src="/assets/sections/partners-contacts/lichi.svg"
                       alt="Lichi"
@@ -435,8 +483,8 @@
                       alt="Lichi"
                       class="logo-hover"
                     />
-                  </a>
-                  <a href="https://myataofficial.com/" class="partner-logo" data-partner="miata">
+                  </div>
+                  <div class="partner-logo" data-partner="miata">
                     <img
                       src="/assets/sections/partners-contacts/miata.svg"
                       alt="Miata"
@@ -447,8 +495,8 @@
                       alt="Miata"
                       class="logo-hover"
                     />
-                  </a>
-                  <a href="https://loona.rest/" class="partner-logo" data-partner="loona">
+                  </div>
+                  <div class="partner-logo" data-partner="loona">
                     <img
                       src="/assets/sections/partners-contacts/loona.svg"
                       alt="LOONA Restaurant"
@@ -459,8 +507,8 @@
                       alt="LOONA Restaurant"
                       class="logo-hover"
                     />
-                  </a>
-                  <a href="https://borodach.com/" class="partner-logo" data-partner="borodach">
+                  </div>
+                  <div class="partner-logo" data-partner="borodach">
                     <img
                       src="/assets/sections/partners-contacts/borodach.svg"
                       alt="BORODACH"
@@ -471,8 +519,8 @@
                       alt="BORODACH"
                       class="logo-hover"
                     />
-                  </a>
-                  <a href="https://truegamers.world/" class="partner-logo" data-partner="true-gamers">
+                  </div>
+                  <div class="partner-logo" data-partner="true-gamers">
                     <img
                       src="/assets/sections/partners-contacts/true-gamers.svg"
                       alt="TRUE GAMERS"
@@ -483,8 +531,8 @@
                       alt="TRUE GAMERS"
                       class="logo-hover"
                     />
-                  </a>
-                  <a href="https://hookahplace.ru/en/" class="partner-logo" data-partner="hp">
+                  </div>
+                  <div class="partner-logo" data-partner="hp">
                     <img
                       src="/assets/sections/partners-contacts/hp.svg"
                       alt="One Life Exclusive"
@@ -495,8 +543,8 @@
                       alt="One Life Exclusive"
                       class="logo-hover"
                     />
-                  </a>
-                  <a href="https://www.zenon.ae/" class="partner-logo" data-partner="zenon">
+                  </div>
+                  <div class="partner-logo" data-partner="zenon">
                     <img
                       src="/assets/sections/partners-contacts/zenon.svg"
                       alt="Zenon Dental Clinic"
@@ -507,20 +555,18 @@
                       alt="Zenon Dental Clinic"
                       class="logo-hover"
                     />
-                  </a>
+                  </div>
                 </div>
                 <div class="partner-names">
-                  <a href="https://loona.rest/" class="partner-name">LOONA Restaurant</a>
-                  <a href="https://borodach.com/" class="partner-name">BORODACH</a>
-                  <a href="https://truegamers.world/" class="partner-name">TRUE GAMERS</a>
-                  <a href="https://ok-galleries.com/" class="partner-name">OK GALLERIES</a>
-                  <a href="https://oneliferent.com/" class="partner-name">One Life Exclusive</a>
-                  <a href="https://www.zenon.ae/" class="partner-name">Zenon Dental Clinic</a>
-                  <a href="#" class="partner-name">Legacy Group FZC</a>
-                  <a href="#" class="partner-name">Al Qubtan Scooter rentals</a>
-                  <a href="#" class="partner-name"
-                    >Jazeerat Al Entertaiment Games</a
-                  >
+                  <div class="partner-name">LOONA Restaurant</div>
+                  <div class="partner-name">BORODACH</div>
+                  <div class="partner-name">TRUE GAMERS</div>
+                  <div class="partner-name">OK GALLERIES</div>
+                  <div class="partner-name">One Life Exclusive</div>
+                  <div class="partner-name">Zenon Dental Clinic</div>
+                  <div class="partner-name">Legacy Group FZC</div>
+                  <div class="partner-name">Al Qubtan Scooter rentals</div>
+                  <div class="partner-name">Jazeerat Al Entertaiment Games</div>
                 </div>
               </div>
             </div>
@@ -530,62 +576,80 @@
               <!-- Contact Form Section -->
               <div class="contact-info">
                 <h2 class="contact-title text-title gradient-text-primary">
-                  Ready to Join the Future<br />of Payments?
+                  Ready to Join the Future of Payments?
                 </h2>
-                <p class="contact-subtitle">
-                  Get your personalized offer. Contact us today!
-                </p>
-                <div class="contact-details">
-                  <div class="contact-item">
-                    <img
-                      src="/assets/icons/ui/phone.svg"
-                      alt="Phone"
-                      class="contact-icon"
-                    />
-                    <a href="tel:+971582580403" class="contact-text"
-                      >+971 58 258 0403</a
-                    >
+                <div class="contact-info-wrapper">
+                  <p class="section-description">
+                    Get your personalized offer. Contact us today!
+                  </p>
+                  <div class="contact-details desktop-only">
+                    <div class="contact-item">
+                      <img
+                        src="/assets/icons/ui/phone.svg"
+                        alt="Phone"
+                        class="contact-icon"
+                      />
+                      <a href="tel:+971582580403" class="contact-text"
+                        >+971 58 258 0403</a
+                      >
+                    </div>
+                    <div class="contact-item">
+                      <img
+                        src="/assets/icons/ui/mail.svg"
+                        alt="Email"
+                        class="contact-icon"
+                      />
+                      <a href="mailto:terminal@defiway.com" class="contact-text"
+                        >terminal@defiway.com</a
+                      >
+                    </div>
                   </div>
-                  <div class="contact-item">
-                    <img
-                      src="/assets/icons/ui/mail.svg"
-                      alt="Email"
-                      class="contact-icon"
-                    />
-                    <a href="mailto:terminal@defiway.com" class="contact-text"
-                      >terminal@defiway.com</a
+                  <div class="social-links desktop-only">
+                    <a
+                      href="https://www.linkedin.com/posts/defiway_crypto-cryptopayments-defi-activity-7074332080096075776-xDBR"
+                      class="social-link"
+                      aria-label="LinkedIn"
                     >
+                      <img
+                        src="/assets/icons/social/linkedin.svg"
+                        alt="LinkedIn"
+                        class="social-icon"
+                      />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61574893319240"
+                      class="social-link"
+                      aria-label="Facebook"
+                    >
+                      <img
+                        src="/assets/icons/social/facebook.svg"
+                        alt="Facebook"
+                        class="social-icon"
+                      />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/defiway?igsh=MWE2eG1zbGNqb3ljZQ=="
+                      class="social-link"
+                      aria-label="Instagram"
+                    >
+                      <img
+                        src="/assets/icons/social/instagram.svg"
+                        alt="Instagram"
+                        class="social-icon"
+                      />
+                    </a>
+                    <a
+                      href="https://x.com/Defiwayapp"
+                      class="social-link"
+                      aria-label="X/Twitter"
+                    >
+                      <img
+                        src="/assets/icons/social/twitter.svg"
+                        alt="X/Twitter"
+                        class="social-icon"
+                      />
+                    </a>
                   </div>
-                </div>
-                <div class="social-links">
-                  <a href="#" class="social-link" aria-label="LinkedIn">
-                    <img
-                      src="/assets/icons/social/linkedin.svg"
-                      alt="LinkedIn"
-                      class="social-icon"
-                    />
-                  </a>
-                  <a href="#" class="social-link" aria-label="Facebook">
-                    <img
-                      src="/assets/icons/social/facebook.svg"
-                      alt="Facebook"
-                      class="social-icon"
-                    />
-                  </a>
-                  <a href="#" class="social-link" aria-label="Instagram">
-                    <img
-                      src="/assets/icons/social/instagram.svg"
-                      alt="Instagram"
-                      class="social-icon"
-                    />
-                  </a>
-                  <a href="#" class="social-link" aria-label="Twitter">
-                    <img
-                      src="/assets/icons/social/twitter.svg"
-                      alt="Twitter"
-                      class="social-icon"
-                    />
-                  </a>
                 </div>
               </div>
               <form class="contact-form-container" id="consultationForm">
@@ -630,9 +694,7 @@
                     <span class="consent-text">
                       I give my consent to process my personal data in
                       accordance with
-                      <a href="/privacy" class="privacy-link"
-                        >Privacy Policy</a
-                      >
+                      <a href="/privacy" class="privacy-link">Privacy Policy</a>
                     </span>
                   </label>
                 </div>
@@ -640,6 +702,76 @@
                   Get free consultation
                 </button>
               </form>
+              <div class="contact-info-wrapper tablet-mobile-only">
+                <div class="contact-details">
+                  <div class="contact-item">
+                    <img
+                      src="/assets/icons/ui/phone.svg"
+                      alt="Phone"
+                      class="contact-icon"
+                    />
+                    <a href="tel:+971582580403" class="contact-text"
+                      >+971 58 258 0403</a
+                    >
+                  </div>
+                  <div class="contact-item">
+                    <img
+                      src="/assets/icons/ui/mail.svg"
+                      alt="Email"
+                      class="contact-icon"
+                    />
+                    <a href="mailto:terminal@defiway.com" class="contact-text"
+                      >terminal@defiway.com</a
+                    >
+                  </div>
+                </div>
+                <div class="social-links">
+                  <a
+                    href="https://www.linkedin.com/posts/defiway_crypto-cryptopayments-defi-activity-7074332080096075776-xDBR"
+                    class="social-link"
+                    aria-label="LinkedIn"
+                  >
+                    <img
+                      src="/assets/icons/social/linkedin.svg"
+                      alt="LinkedIn"
+                      class="social-icon"
+                    />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61574893319240"
+                    class="social-link"
+                    aria-label="Facebook"
+                  >
+                    <img
+                      src="/assets/icons/social/facebook.svg"
+                      alt="Facebook"
+                      class="social-icon"
+                    />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/defiway?igsh=MWE2eG1zbGNqb3ljZQ=="
+                    class="social-link"
+                    aria-label="Instagram"
+                  >
+                    <img
+                      src="/assets/icons/social/instagram.svg"
+                      alt="Instagram"
+                      class="social-icon"
+                    />
+                  </a>
+                  <a
+                    href="https://x.com/Defiwayapp"
+                    class="social-link"
+                    aria-label="X/Twitter"
+                  >
+                    <img
+                      src="/assets/icons/social/twitter.svg"
+                      alt="X/Twitter"
+                      class="social-icon"
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
         </div>
@@ -702,6 +834,8 @@
               </div>
             </div>
 
+            <div class="footer-divider tablet-mobile-only"></div>
+
             <!-- Navigation Columns -->
             <div class="footer-nav">
               <div class="nav-column">
@@ -737,6 +871,7 @@
                   </li>
                 </ul>
               </div>
+              <div class="footer-divider mobile-only"></div>
               <div class="nav-column">
                 <h4 class="nav-title">Resources</h4>
                 <ul class="nav-links">
@@ -763,7 +898,11 @@
                     >
                   </li>
                   <li>
-                    <a href="#" class="nav-link">CertiK Audit</a>
+                    <a
+                      href="https://skynet.certik.com/projects/defiway#operational-resilience"
+                      class="nav-link"
+                      >CertiK Audit</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -781,11 +920,19 @@
                       >Roadmap</a
                     >
                   </li>
-                  <li><a href="#" class="nav-link">FAQ</a></li>
-                  <li><a href="#" class="nav-link">Security</a></li>
+                  <li>
+                    <a href="https://defiway.com/faq" class="nav-link">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="https://defiway.com/security" class="nav-link"
+                      >Security</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
+
+            <div class="footer-divider tablet-mobile-only"></div>
 
             <!-- App Section with Glass Background -->
             <div class="app-container">
@@ -879,6 +1026,7 @@
                   alt="DefiWay App"
                   class="app-phone"
                 />
+                <div class="phone-gradient mobile-only"></div>
               </div>
             </div>
           </div>

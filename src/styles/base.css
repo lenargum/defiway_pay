@@ -2,7 +2,7 @@
 /* CSS reset and foundational styles - Design tokens are in design-system.css */
 
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200,300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200,300;400;500&display=swap");
 
 /* CSS Reset and Base Styles */
 /* Reset body default styles globally */
@@ -56,11 +56,11 @@ body {
 }
 
 /* Typography Reset */
-#defiway-landing h1, 
-#defiway-landing h2, 
-#defiway-landing h3, 
-#defiway-landing h4, 
-#defiway-landing h5, 
+#defiway-landing h1,
+#defiway-landing h2,
+#defiway-landing h3,
+#defiway-landing h4,
+#defiway-landing h5,
 #defiway-landing h6 {
   font-weight: var(--font-semibold);
   line-height: var(--line-height-tight);
@@ -84,35 +84,135 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #defiway-landing .container {
     max-width: var(--container-lg);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   #defiway-landing .container {
-    max-width: var(--container-sm);
+    max-width: none;
+    width: 100%;
   }
 }
 
 /* Section default paddings (desktop-first, override per section if needed) */
-#defiway-landing section, #defiway-landing footer {
-  padding-left: var(--space-5);
-  padding-right: var(--space-5);
+#defiway-landing section,
+#defiway-landing footer {
+  --page-padding: var(--space-5);
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
 }
 
-@media (max-width: 768px) {
-  #defiway-landing section, #defiway-landing footer {
-    padding-left: var(--space-4);
-    padding-right: var(--space-4);
+@media (max-width: 1024px) {
+  #defiway-landing section,
+  #defiway-landing footer {
+    --page-padding: var(--space-8);
   }
 }
 
-@media (max-width: 480px) {
-  #defiway-landing section, #defiway-landing footer {
-    padding-left: var(--space-3);
-    padding-right: var(--space-3);
+@media (max-width: 768px) {
+  #defiway-landing section,
+  #defiway-landing footer {
+    --page-padding: var(--space-5);
+  }
+}
+
+#defiway-landing .section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+#defiway-landing .section-badge {
+  padding: var(--space-2) var(--space-5);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+
+  font-weight: var(--font-medium);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-white);
+}
+
+
+@media (max-width: 1023px) {
+  #defiway-landing .section-badge {
+    font-size: var(--font-size-xs);
+  }
+}
+
+#defiway-landing .section-header-with-cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+/* Tablet (768) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  #defiway-landing .section-header-with-cta-wrapper {
+    gap: var(--space-8);
+  }
+}
+
+/* Mobile (375) */
+@media (max-width: 768px) {
+  #defiway-landing .section-header-with-cta-wrapper {
+    gap: var(--space-4);
+  }
+}
+
+#defiway-landing .section-description {
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-base);
+  text-align: center;
+  color: var(--color-white);
+}
+
+/* Tablet (768) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  #defiway-landing .section-description {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Mobile (375) */
+@media (max-width: 768px) {
+  #defiway-landing .section-description {
+    font-size: var(--font-size-sm);
+  }
+}
+
+#defiway-landing .social-links {
+  display: flex;
+  gap: var(--space-3);
+}
+
+#defiway-landing .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-12);
+  height: var(--space-12);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-base);
+  transition: var(--transition-base);
+}
+
+#defiway-landing .social-link:hover .social-icon,
+#defiway-landing .social-link:focus .social-icon {
+  opacity: 1;
+}
+
+@media (max-width: 1023px) {
+  #defiway-landing .social-link {
+    width: var(--space-10);
+    height: var(--space-10);
   }
 }
 
@@ -140,4 +240,41 @@ body {
 #defiway-landing :focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+
+@media (max-width: 768px) {
+  #defiway-landing .mobile-only {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  #defiway-landing .mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  #defiway-landing .tablet-mobile-only {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  #defiway-landing .tablet-mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  #defiway-landing .desktop-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #defiway-landing .desktop-only {
+    display: block;
+  }
 }

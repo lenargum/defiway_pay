@@ -69,35 +69,11 @@
   color: var(--color-white);
 }
 
-#defiway-landing .social-links {
-  display: flex;
-  gap: var(--space-3);
-}
-
-#defiway-landing .social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--space-12);
-  height: var(--space-12);
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-base);
-  transition: var(--transition-base);
-}
-
-#defiway-landing .social-link:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
 #defiway-landing .social-icon {
   width: var(--space-6);
   height: var(--space-6);
   opacity: 0.5;
   transition: var(--transition-base);
-}
-
-#defiway-landing .social-link:hover .social-icon {
-  opacity: 1;
 }
 
 #defiway-landing .footer-nav {
@@ -175,7 +151,7 @@
   bottom: 0;
   right: 0;
   width: 230px;
-  height: 312px;
+  height: 300px;
 
   display: flex;
   align-items: flex-end;
@@ -314,4 +290,188 @@
 
 #defiway-landing .footer-link:hover {
   color: var(--color-white);
+}
+
+#defiway-landing .footer-divider {
+  width: calc(100% + var(--page-padding) * 2);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 calc(var(--page-padding) * -1);
+  padding: 0 var(--page-padding);
+}
+
+/* 1440 adjustments, manually set to 1200px */ 
+@media (max-width: 1440px) and (min-width: 1200px) {
+  #defiway-landing .footer-top { gap: var(--space-6); }
+  #defiway-landing .app-container { width: 408px; min-height: 276px; padding-right: 32px; }
+  #defiway-landing .app-info { max-width: none; }
+  #defiway-landing .app-preview { display: none; }
+  #defiway-landing .app-downloads { flex-wrap: wrap; }
+  #defiway-landing .app-store-btn { flex: 1; }
+}
+
+/* Tablet 768–1023, manually set to 1200px */
+@media (max-width: 1200px) and (min-width: 768px) {
+  #defiway-landing .footer { padding-top: 44px; }
+
+  #defiway-landing .footer-top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-10);
+    margin-bottom: var(--space-10); 
+  }
+  #defiway-landing .footer-brand {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    gap: var(--space-6);
+  }
+  #defiway-landing .footer-logo-contact-info { align-items: flex-start; }
+  #defiway-landing .footer-contact-info { text-align: center; }
+  #defiway-landing .footer-social { align-items: flex-end; }
+
+  #defiway-landing .footer-nav {
+    justify-content: space-between;
+    gap: var(--space-5);
+    padding: 0 var(--space-20);
+  }
+  #defiway-landing .nav-column { width: auto; align-items: center; text-align: center; }
+
+  #defiway-landing .app-container {
+    width: 616px;
+    min-height: 301px;
+    margin-top: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #defiway-landing .app-preview { right: 20px; bottom: 0; width: 230px; height: 300px; }
+  #defiway-landing .app-phone { width: 200px; height: 300px; }
+
+  #defiway-landing .footer-bottom {
+    flex-direction: column-reverse;
+    gap: var(--space-6);
+    align-items: center;
+    padding-top: var(--space-10);
+
+    margin-left: calc(var(--page-padding) * -1);
+    margin-right: calc(var(--page-padding) * -1);
+    padding-left: var(--page-padding);
+    padding-right: var(--page-padding);
+  }
+
+  #defiway-landing .footer-link {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  #defiway-landing .copyright {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Mobile ≤768 */
+@media (max-width: 768px) {
+  #defiway-landing .footer { padding-top: var(--space-20); }
+  #defiway-landing .footer-top {
+    align-items: center;
+    flex-direction: column;
+    gap: var(--space-10);
+    margin-bottom: var(--space-10);
+  }
+  #defiway-landing .footer-brand {
+    width: auto;
+    align-items: center;
+    gap: var(--space-10);
+  }
+  #defiway-landing .footer-logo-contact-info { align-items: center; }
+  #defiway-landing .footer-contact-info { text-align: center; gap: var(--space-4); }
+  #defiway-landing .footer-social { align-items: center; gap: var(--space-6); }
+
+  #defiway-landing .footer-nav {
+    align-self: stretch;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-6);
+  }
+  #defiway-landing .nav-column { align-items: center; text-align: center; }
+  #defiway-landing .nav-column:first-child { width: 100%; }
+
+
+  #defiway-landing .nav-column:nth-child(3) { flex: 1; }
+  #defiway-landing .nav-column:nth-child(4) { flex: 1; }
+
+  #defiway-landing .nav-column:first-child .nav-links {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 20px;
+  }
+
+  #defiway-landing .app-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 28px;
+
+    width: 100%;
+    max-width: 335px;
+    min-height: 569px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--space-6);
+  }
+  #defiway-landing .app-preview {
+    position: static;
+    width: 100%;
+    height: 100%;
+    
+    margin: 0 auto;
+    
+    position: relative;
+  }
+
+  #defiway-landing .app-preview .phone-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%);
+    pointer-events: none;
+  }
+
+
+  #defiway-landing .app-phone {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 247 / 293;
+
+    object-fit: cover;
+    object-position: top;
+  }
+
+  #defiway-landing .app-info { max-width: 295px; align-items: center; text-align: center; }
+  #defiway-landing .app-downloads { gap: var(--space-2); margin-top: 28px; flex-wrap: wrap; justify-content: center; }
+
+  #defiway-landing .footer-bottom {
+    flex-direction: column-reverse;
+    gap: var(--space-6);
+    align-items: center;
+    padding-top: var(--space-10);
+
+    margin-left: calc(var(--page-padding) * -1);
+    margin-right: calc(var(--page-padding) * -1);
+    padding-left: var(--page-padding);
+    padding-right: var(--page-padding);
+  }
+  #defiway-landing .footer-menu { flex-direction: column; align-items: center; gap: var(--space-4); }
+
+  #defiway-landing .footer-link {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  #defiway-landing .copyright {
+    color: rgba(255, 255, 255, 0.5);
+  }
 }

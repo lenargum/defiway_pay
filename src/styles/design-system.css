@@ -46,6 +46,7 @@
   --font-size-sm: 14px;
   --font-size-base: 16px;
   --font-size-lg: 18px;
+  --font-size-28: 28px;
   --font-size-20: 20px;
   --font-size-xl: 24px;
   --font-size-2xl: 36px;
@@ -57,6 +58,9 @@
   --line-height-base: 1.43;
   --line-height-relaxed: 1.5;
   --line-height-loose: 1.75;
+  --line-height-20px: 20px;
+  --line-height-40px: 40px;
+  --line-height-48px: 48px;
   --line-height-72px: 72px;
   
   /* 📏 Spacing */
@@ -78,9 +82,11 @@
   --space-14: 56px;
   --space-15: 60px;
   --space-16: 64px;
+  --space-18: 72px;
   --space-20: 80px;
   --space-24: 96px;
   --space-25: 100px;
+  --space-27-5: 110px;
   --space-28: 112px;
   --space-30: 120px;
   --space-32: 128px;
@@ -116,6 +122,12 @@
   --container-3xl: 1590px;
   --container-4xl: 1760px;
 
+  /* Hero Heights by reference frames */
+  --hero-height-1920: 1144px;
+  --hero-height-1440: 1089px;
+  --hero-height-768: 776px;
+  --hero-height-375: 788px;
+
   /* Section/Card/Icon Sizes */
   --size-benefit-icon: 96px;
   --width-benefit-card: 329px;
@@ -127,14 +139,9 @@
   --width-usdt-title: 600px;
   --width-usdt-features: 1162px;
   --gap-usdt-features: 54px;
-  --margin-top-usdt-features: 204px;
   --width-usdt-card: 351px;
   --height-usdt-card: 180px;
   --radius-usdt-card: 24px;
-
-  /* Section Specific Paddings */
-  --padding-top-usdt: 176px;
-  --padding-bottom-usdt: 148px;
   
   /* Z-Index Scale */
   --z-dropdown: 1000;
@@ -163,47 +170,6 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-}
-
-.gradient-bg-glass {
-  background: linear-gradient(0deg, var(--glass-primary), var(--glass-primary)), 
-              linear-gradient(90deg, var(--gradient-teal-mid) 0%, var(--gradient-teal-end) 100%);
-}
-
-.gradient-bg-glass-alt {
-  background: linear-gradient(90deg, var(--gradient-teal-start) 0%, var(--gradient-teal-end) 100%), 
-              var(--glass-primary);
-}
-
-.gradient-bg-section {
-  background: linear-gradient(180deg, var(--glass-tertiary) 0%, var(--gradient-accent-start) 100%);
-}
-
-/* 🌟 Glassmorphism Background Utilities - From Imported Styles */
-.bg-glass-primary {
-  background: linear-gradient(90deg, rgba(85, 154, 154, 0) 0%, rgba(85, 154, 154, 0.2) 100%), rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
-
-.bg-glass-secondary {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(83, 190, 198, 0.2) 100%);
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(100px);
-}
-
-.bg-glass-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
-}
-
-.bg-glass-partner {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
-}
-
-.bg-glass-complex {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(83, 190, 198, 0.2) 100%), rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(100px);
 }
 
 /* 🔤 Typography Classes - From Imported Styles */
@@ -308,35 +274,6 @@
 .text-muted { 
   color: var(--color-white); 
   opacity: var(--text-muted); 
-}
-.text-subtle { 
-  color: var(--color-white); 
-  opacity: var(--text-subtle); 
-}
-
-/* 🎯 Utility Classes */
-.glass-blur {
-  backdrop-filter: var(--backdrop-blur);
-}
-
-.glass-blur-lg {
-  backdrop-filter: var(--backdrop-blur-lg);
-}
-
-.glass-blur-xl {
-  backdrop-filter: var(--backdrop-blur-xl);
-}
-
-.bg-glass {
-  background: var(--glass-primary);
-}
-
-.bg-glass-light {
-  background: var(--glass-secondary);
-}
-
-.border-glass {
-  border: 1px solid var(--border-light);
 }
 
 /* Responsive Typography */

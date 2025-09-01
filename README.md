@@ -51,7 +51,7 @@ defiway_pay/
 │   │       ├── benefits.css
 │   │       ├── crypto-device.css
 │   │       ├── usdt.css
-│   │       ├── additional-benefits.css
+│   │       ├── other-benefits.css
 │   │       ├── partners.css
 │   │       └── contact-us.css
 │   └── assets/                       # Images, icons, logos (by section)
@@ -64,7 +64,7 @@ defiway_pay/
 Defined in `src/styles/design-system.css` under `:root` as design tokens.
 
 - Colors: `--color-*` (brand, glass layers)
-- Gradients: `--gradient-*` and utilities: `.gradient-text-*`, `.bg-glass-*`
+- Gradients: `--gradient-*` and utilities: `.gradient-text-*`
 - Typography: weights/sizes/line-heights (`--font-*`, `--font-size-*`, `--line-height-*`)
 - Spacing: `--space-*` (fine-grained 4..152px steps)
 - Radius: `--radius-*` including `--radius-full` and `--radius-2xl`
@@ -83,15 +83,6 @@ Text gradient utilities reflect Figma:
 }
 ```
 
-Glass backgrounds (backdrop blur applied as needed):
-
-```css
-.bg-glass-secondary {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(83,190,198,0.2) 100%);
-  backdrop-filter: blur(100px);
-}
-```
-
 ## Sections and Anchors
 
 `src/index.html` sections (each with an anchor for deep links and in-page nav):
@@ -100,7 +91,7 @@ Glass backgrounds (backdrop blur applied as needed):
 - `#benefits`
 - `#crypto-device`
 - `#usdt`
-- `#additional-benefits`
+- `#other-benefits`
 - `#partners`
 - `#contact`
 
@@ -145,7 +136,7 @@ window.scrollTo({ top: targetPosition, behavior: 'smooth' });
 Images use responsive-safe defaults:
 
 ```css
-#defiway-landing img { max-width: 100%; height: auto; }
+img { max-width: 100%; height: auto; }
 ```
 
 ## Accessibility

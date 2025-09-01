@@ -2,10 +2,15 @@
 
 /* USDT Section */
 #defiway-landing .usdt-section {
-  padding: var(--padding-top-usdt) 0 var(--padding-bottom-usdt);
-  background-image: url('/assets/sections/usdt/usdt-background.png');
+  --usdt-background-top-black-gradient: linear-gradient(180deg,var(--color-black) 0%, transparent 10%);
+
+  padding-top: 176px;
+  padding-bottom: 148px;
+
+  background-image: var(--usdt-background-top-black-gradient),
+    url("/assets/sections/usdt/usdt-background.png");
   background-size: cover;
-  background-position: center;
+  background-position: 0% 0%, bottom center;
   background-repeat: no-repeat;
   object-fit: cover;
   position: relative;
@@ -15,20 +20,19 @@
 #defiway-landing .usdt-content {
   display: flex;
   flex-direction: column;
+  gap: 204px;
   align-items: center;
   position: relative;
   z-index: 2;
 }
 
 #defiway-landing .usdt-title {
-  margin-top: var(--space-8);
-
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: var(--font-semibold);
   font-size: var(--font-size-4xl);
-  line-height: var(--line-height-tight);
+  line-height: var(--line-height-base);
   text-align: center;
   max-width: var(--width-usdt-title); /* reference width */
 }
@@ -45,11 +49,14 @@
   max-width: var(--width-usdt-features); /* reference width */
   width: 100%;
   justify-content: center;
-  margin-top: var(--margin-top-usdt-features); /* align features block relative to title */
 }
 
 #defiway-landing .usdt-feature {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: var(--radius-usdt-card); /* exact */
@@ -58,10 +65,10 @@
   transition: var(--transition-base);
   position: relative;
   width: var(--width-usdt-card); /* exact */
-  height: var(--height-usdt-card); /* exact */
+  min-height: var(--height-usdt-card); /* exact */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -71,7 +78,11 @@
   inset: 0;
   padding: 2px; /* border thickness */
   border-radius: var(--radius-usdt-card);
-  background: linear-gradient(179.85deg, rgba(185, 242, 243, 0.2) 0.13%, rgba(185, 242, 243, 0) 66.3%);
+  background: linear-gradient(
+    179.85deg,
+    rgba(185, 242, 243, 0.2) 0.13%,
+    rgba(185, 242, 243, 0) 66.3%
+  );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -94,18 +105,102 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Responsive reflow back to grid on smaller screens */
-@media (max-width: 1200px) {
+/* 1440 adjustments retain desktop specs */
+@media (max-width: 1440px) and (min-width: 1024px) {
+  /* keep default desktop sizes; spacing remains ample */
+}
+
+/* Tablet (768) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  #defiway-landing .usdt-section {
+    background-image: var(--usdt-background-top-black-gradient),
+      url("/assets/sections/usdt/usdt-background-tablet.png");
+    padding-top: var(--space-20); /* ≈80px */
+    padding-bottom: var(--space-20);
+  }
+
+  #defiway-landing .usdt-title {
+    max-width: 360px;
+    font-size: var(--font-size-2xl); /* 36px */
+    line-height: var(--line-height-48px);
+  }
+
+  #defiway-landing .usdt-content {
+    gap: 145px;
+  }
+
   #defiway-landing .usdt-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--space-8);
+    grid-template-columns: repeat(2, minmax(295px, 1fr));
+    gap: 32px;
     margin-top: var(--space-16);
+    max-width: 622px;
   }
+
   #defiway-landing .usdt-feature {
     width: auto;
-    height: auto;
+    min-height: 0;
+    border-radius: 20px;
+    padding: 24px 32px;
+  }
+
+  #defiway-landing .usdt-feature::before {
+    border-radius: 20px;
+  }
+
+  #defiway-landing .usdt-feature-title {
+    font-size: var(--font-size-20);
+    line-height: 28px;
+  }
+  #defiway-landing .usdt-feature-description {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-base);
   }
 }
 
+/* Mobile (375) */
+@media (max-width: 768px) {
+  #defiway-landing .usdt-section {
+    background-image: var(--usdt-background-top-black-gradient),
+      url("/assets/sections/usdt/usdt-background-mobile.png");
+    padding-top: var(--space-14); /* ≈56px */
+    padding-bottom: var(--space-20); /* extra for stacked cards */
+  }
 
+  #defiway-landing .usdt-content {
+    gap: 104px;
+  }
+
+  #defiway-landing .usdt-title {
+    max-width: 280px;
+    font-size: var(--font-size-28); /* 28px */
+    line-height: var(--line-height-40px);
+  }
+
+  #defiway-landing .usdt-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 295px;
+  }
+
+  #defiway-landing .usdt-feature {
+    width: auto;
+    min-height: 0;
+    border-radius: 20px;
+    padding: 24px 32px;
+  }
+
+  #defiway-landing .usdt-feature::before {
+    border-radius: 20px;
+  }
+
+  #defiway-landing .usdt-feature-title {
+    font-size: var(--font-size-20);
+    line-height: 28px;
+  }
+  #defiway-landing .usdt-feature-description {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-base);
+  }
+}

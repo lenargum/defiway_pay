@@ -46,7 +46,7 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.7;
   text-decoration: none;
   transition: var(--transition-base);
@@ -66,18 +66,220 @@
   flex-shrink: 0;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  #defiway-landing .header-container {
-    padding: 0 24px;
-  }
+#defiway-landing .menu-btn {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+#defiway-landing .menu-icon {
+  --icon-width: 20px;
+  --icon-height: 14px;
+  --icon-line-height: 2px;
+  display: block;
+  width: var(--icon-width);
+  height: var(--icon-height);
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#defiway-landing .menu-icon span {
+  display: block;
+  position: absolute;
+  height: var(--icon-line-height);
+  width: 100%;
+  background: currentColor;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#defiway-landing .menu-icon span:nth-child(1) {
+  top: calc(var(--icon-height) / 6 - var(--icon-line-height));
+}
+
+#defiway-landing .menu-icon span:nth-child(2),
+#defiway-landing .menu-icon span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#defiway-landing .menu-icon span:nth-child(4) {
+  top: calc(var(--icon-height) * 5 / 6);
+}
+
+#defiway-landing .menu-btn.open .menu-icon span:nth-child(1) {
+  top: 0px;
+  width: 0%;
+  left: 50%;
+  opacity: 0;
+}
+
+#defiway-landing .menu-btn.open .menu-icon span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#defiway-landing .menu-btn.open .menu-icon span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#defiway-landing .menu-btn.open .menu-icon span:nth-child(4) {
+  top: calc(var(--icon-height) - var(--icon-line-height));
+  width: 0%;
+  left: 50%;
+  opacity: 0;
+}
+
+#defiway-landing .mobile-menu {
+  display: none;
+
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-black);
   
+
+  border-top: 1px solid rgba(230, 230, 230, 0.2);
+
+  /* display: flex; */
+  flex-direction: column;
+
+  overflow: auto;
+}
+
+#defiway-landing .menu-btn.open ~ .mobile-menu {
+  display: flex;
+}
+
+#defiway-landing .mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+
+  padding: 80px var(--space-4);
+
+  border-bottom: 1px solid rgba(230, 230, 230, 0.2);
+}
+
+#defiway-landing .mobile-menu-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  padding: 80px var(--space-4) 16px;
+}
+
+#defiway-landing .mobile-menu-social-title {
+  font-size: 16px;
+  line-height: var(--line-height-base);
+  color: var(--color-white);
+  font-weight: var(--font-semibold);
+}
+
+/* 1440 adjustments: reduce nav gap */
+@media (max-width: 1440px) and (min-width: 1024px) {
+  #defiway-landing .header-container {
+    padding: 0 20px;
+  }
   #defiway-landing .header-nav {
+    gap: 44px;
+  }
+}
+
+/* Tablet 768–1023: tighter padding and logo size */
+@media (max-width: 1023px) and (min-width: 768px) {
+  #defiway-landing .header-container {
+    padding: 0 32px;
+  }
+  #defiway-landing .header-logo .logo {
+    width: 182px;
+    height: 32px;
+  }
+  #defiway-landing .header-container > .header-nav {
+    display: none;
+  }
+
+  #defiway-landing .header-container .header-nav {
+    flex-direction: column;
     gap: 32px;
   }
-  
+
+  #defiway-landing .header-container > .header-cta {
+    display: none;
+  }
+}
+
+/* Mobile ≤768: shorter header, hide nav */
+@media (max-width: 768px) {
+  #defiway-landing .header {
+    height: 60px;
+  }
+  #defiway-landing .header-container {
+    padding: 0 20px;
+  }
   #defiway-landing .header-logo .logo {
-    width: 140px;
-    height: 25px;
+    width: 159px;
+    height: 28px;
+  }
+  #defiway-landing .header-container > .header-nav {
+    display: none;
+  }
+
+  #defiway-landing .header-container .header-nav {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  #defiway-landing .header-container > .header-cta {
+    display: none;
+  }
+
+  #defiway-landing .mobile-menu {
+    top: 60px;
+  }
+
+  #defiway-landing .mobile-menu-content {
+    padding: 80px var(--space-4);
+    gap: 80px;
+  }
+
+  #defiway-landing .mobile-menu-social {
+    padding: 52px var(--space-4) 0;
+    gap: 24px;
   }
 }

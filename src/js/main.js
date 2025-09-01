@@ -20,43 +20,47 @@ const debounce = (func, wait) => {
   };
 };
 
-// Mobile menu functionality
+// Mobile menu functionality (toggle 'open' class)
 class MobileMenu {
   constructor() {
-    this.menuBtn = $('#defiway-landing .mobile-menu-btn');
-    this.nav = $('#defiway-landing .nav-container');
+    this.menuBtn = $('#defiway-landing .menu-btn');
+    this.menu = $('#defiway-landing .mobile-menu');
     this.isOpen = false;
-    
+
     this.init();
   }
-  
+
   init() {
-    if (this.menuBtn) {
+    if (this.menuBtn && this.menu) {
       this.menuBtn.addEventListener('click', () => this.toggle());
+
+      // Close when clicking any interactive item inside the menu
+      const closers = this.menu.querySelectorAll('a, button');
+      closers.forEach((el) => el.addEventListener('click', () => this.close()));
     }
-    
-    // Close menu on window resize
+
+    // Close menu if viewport becomes ≤ 1024px
     window.addEventListener('resize', debounce(() => {
-      if (window.innerWidth > 768 && this.isOpen) {
+      if (window.innerWidth >= 1024 && this.isOpen) {
         this.close();
       }
     }, 250));
   }
-  
+
   toggle() {
     this.isOpen ? this.close() : this.open();
   }
-  
+
   open() {
-    this.nav.classList.add('mobile-menu-open');
-    this.menuBtn.classList.add('active');
+    if (!this.menuBtn) return;
+    this.menuBtn.classList.add('open');
     this.isOpen = true;
     document.body.style.overflow = 'hidden';
   }
-  
+
   close() {
-    this.nav.classList.remove('mobile-menu-open');
-    this.menuBtn.classList.remove('active');
+    if (!this.menuBtn) return;
+    this.menuBtn.classList.remove('open');
     this.isOpen = false;
     document.body.style.overflow = '';
   }

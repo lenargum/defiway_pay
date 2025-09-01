@@ -148,7 +148,7 @@
 }
 
 /* Mobile: single column, compact spacing; title 24/36 */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #dwp .contact-us-section .container {
     grid-template-columns: 1fr;
     gap: 44px;

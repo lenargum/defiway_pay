@@ -249,7 +249,7 @@
 }
 
 /* Responsive Typography */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .text-hero {
     font-size: var(--font-size-3xl);
     line-height: var(--line-height-tight);

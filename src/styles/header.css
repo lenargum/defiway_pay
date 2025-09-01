@@ -246,7 +246,7 @@
 }
 
 /* Mobile ≤768: shorter header, hide nav */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #dwp .header {
     height: 60px;
   }

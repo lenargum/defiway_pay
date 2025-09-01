@@ -148,7 +148,7 @@
 }
 
 /* Mobile ≤768: logos 160x96, smaller gaps */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #dwp .partners-contact-sections-wrapper {
     gap: var(--space-28);
     padding-top: var(--space-14);

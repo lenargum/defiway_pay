@@ -103,7 +103,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #dwp .container {
     max-width: none;
     width: 100%;
@@ -125,7 +125,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #dwp section,
   #dwp footer {
     --page-padding: var(--space-5);
@@ -172,7 +172,7 @@ body {
 }
 
 /* Mobile (375) */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #dwp .section-header-with-cta-wrapper {
     gap: var(--space-4);
   }
@@ -195,7 +195,7 @@ body {
 }
 
 /* Mobile (375) */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #dwp .section-description {
     font-size: var(--font-size-sm);
   }
@@ -256,7 +256,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #dwp .mobile-only {
     display: block;
   }

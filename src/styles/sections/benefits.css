@@ -150,7 +150,7 @@
 }
 
 /* Mobile (375) */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #dwp .benefits-section {
     padding-top: var(--space-14);
     padding-bottom: var(--space-14);

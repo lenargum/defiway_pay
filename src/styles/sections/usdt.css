@@ -130,15 +130,16 @@
   }
 
   #dwp .usdt-features {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(295px, 1fr));
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 32px;
     margin-top: var(--space-16);
     max-width: 622px;
   }
 
   #dwp .usdt-feature {
-    width: auto;
+    width: 295px;
     min-height: 0;
     border-radius: 20px;
     padding: 24px 32px;
@@ -159,7 +160,7 @@
 }
 
 /* Mobile (375) */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #dwp .usdt-section {
     background-image: var(--usdt-background-top-black-gradient),
       url("/assets/sections/usdt/usdt-background-mobile.png");
@@ -178,8 +179,9 @@
   }
 
   #dwp .usdt-features {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 28px;
     max-width: 295px;
   }

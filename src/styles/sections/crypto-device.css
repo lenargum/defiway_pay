@@ -150,7 +150,7 @@
 }
 
 /* Mobile (375) */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #dwp .crypto-device-section { padding-top: var(--space-14); padding-bottom: var(--space-14); }
   #dwp .crypto-device-panel { border-radius: 24px; padding: 44px 12px 420px; background-size: auto 425px, auto auto; background-position: 80% bottom}
   #dwp .crypto-device-panel::after { border-radius: 24px; }

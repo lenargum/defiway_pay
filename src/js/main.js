@@ -46,8 +46,6 @@ class MobileMenu {
   }
 
   init() {
-    console.log(this.menuBtn, this.menu);
-    
     if (this.menuBtn && this.menu) {
       this.menuBtn.addEventListener('click', () => this.toggle());
 

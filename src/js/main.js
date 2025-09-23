@@ -258,18 +258,11 @@ class SmoothScroll {
     
     if (target) {
       e.preventDefault();
-      const targetRect = target.getBoundingClientRect();
-      const targetPosition = Math.max(0, Math.floor(targetRect.top + window.pageYOffset - window.innerHeight / 2 + targetRect.height / 2));
 
       const firstInput = target.querySelector('input, textarea');
       if (firstInput) {
         firstInput.focus();
       }
-      
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
     }
   }
 }

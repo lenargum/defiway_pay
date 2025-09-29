@@ -95,6 +95,13 @@
   opacity: var(--text-muted);
 }
 
+@media (max-width: 767px) {
+  #dwp .form-input.form-textarea {
+    min-height: 152px;
+  }
+}
+
+
 /* 📝 Form Groups */
 #dwp .form-group {
   display: flex;
@@ -152,6 +159,8 @@
   font-family: var(--font-family);
   font-size: var(--font-size-sm);
   color: #ff6b6b;
+
+  padding: 0 var(--space-3);
 }
 
 @media (max-width: 767px) {

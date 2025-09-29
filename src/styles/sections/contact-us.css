@@ -86,6 +86,16 @@
   gap: var(--space-6);
 }
 
+@media (max-width: 767px) {
+  #dwp .contact-form-container {
+    gap: var(--space-3);
+  }
+
+  #dwp .form-textarea {
+    margin: var(--space-3) 0;
+  }
+}
+
 /* Privacy Policy Link */
 #dwp .privacy-link {
   color: var(--color-primary);
